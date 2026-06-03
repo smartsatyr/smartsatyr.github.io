@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rally for Green</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #1a3a2a;
+    --green-mid: #2d6a4f;
+    --green-bright: #52b788;
+    --yellow-ball: #d4e157;
+    --yellow-hot: #c6f135;
+    --earth: #8b5e3c;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--green-deep); color: var(--cream); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(26,58,42,0.92); backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--green-bright);
+  }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.08em; color: var(--yellow-ball); }
+  .nav-logo span { color: var(--green-bright); }
+  nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+  nav a { text-decoration: none; color: var(--cream); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+  nav a:hover { color: var(--yellow-ball); }
+  .nav-donate {
+    background: var(--yellow-hot); color: var(--green-deep) !important;
+    padding: 0.5rem 1.2rem; font-weight: 700 !important;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    transition: background 0.2s, transform 0.2s !important;
+  }
+  .nav-donate:hover { background: var(--yellow-ball) !important; transform: translateY(-1px); color: var(--green-deep) !important; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 7rem 3rem 4rem; }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(82,183,136,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 10% 80%, rgba(139,94,60,0.2) 0%, transparent 50%),
+      linear-gradient(160deg, var(--green-deep) 0%, #0f2318 100%);
+  }
+  .ball { position: absolute; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #e8f57a, var(--yellow-ball) 60%, #a8b832); box-shadow: inset -4px -4px 12px rgba(0,0,0,0.3), 0 0 30px rgba(212,225,87,0.2); opacity: 0.15; animation: float linear infinite; }
+  .ball-1 { width: 120px; height: 120px; top: 10%; right: 5%; animation-duration: 18s; }
+  .ball-2 { width: 80px; height: 80px; top: 60%; right: 20%; animation-duration: 24s; animation-delay: -6s; }
+  .ball-3 { width: 200px; height: 200px; bottom: -50px; right: 35%; animation-duration: 30s; animation-delay: -12s; opacity: 0.08; }
+  .ball-4 { width: 60px; height: 60px; top: 30%; left: 5%; animation-duration: 20s; animation-delay: -4s; }
+  @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 33% { transform: translateY(-20px) rotate(120deg); } 66% { transform: translateY(10px) rotate(240deg); } }
+
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+  .hero-tag { display: inline-block; background: var(--yellow-ball); color: var(--green-deep); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.35rem 1rem; margin-bottom: 1.5rem; clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%); animation: slideIn 0.6s ease both; }
+  .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 8rem); line-height: 0.92; letter-spacing: 0.02em; margin-bottom: 1.5rem; animation: slideIn 0.7s ease 0.1s both; }
+  .hero h1 .accent { color: var(--yellow-ball); display: block; }
+  .hero h1 .accent2 { color: var(--green-bright); }
+  .hero-desc { font-size: 1.15rem; line-height: 1.7; color: rgba(245,240,232,0.85); max-width: 520px; margin-bottom: 2.5rem; animation: slideIn 0.7s ease 0.2s both; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; animation: slideIn 0.7s ease 0.3s both; }
+  @keyframes slideIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+  .btn-primary { background: var(--yellow-hot); color: var(--green-deep); padding: 0.9rem 2.2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); transition: transform 0.2s, background 0.2s; display: inline-block; }
+  .btn-primary:hover { transform: translateY(-2px) scale(1.03); background: var(--yellow-ball); }
+  .btn-outline { background: transparent; color: var(--cream); padding: 0.9rem 2.2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--green-bright); cursor: pointer; transition: background 0.2s, color 0.2s; display: inline-block; }
+  .btn-outline:hover { background: var(--green-bright); color: var(--green-deep); }
+  .btn-donate { background: var(--yellow-hot); color: var(--green-deep); padding: 0.9rem 2.2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; display: inline-block; transition: transform 0.2s, background 0.2s; border-radius: 2px; }
+  .btn-donate:hover { transform: translateY(-2px) scale(1.03); background: var(--yellow-ball); }
+
+  /* STATS BAR */
+  .stats-bar { background: var(--green-mid); padding: 2rem 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; border-top: 3px solid var(--yellow-ball); border-bottom: 3px solid var(--yellow-ball); }
+  .stat { text-align: center; padding: 1rem; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--yellow-ball); line-height: 1; }
+  .stat-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(245,240,232,0.7); margin-top: 0.3rem; }
+
+  /* DONATE BANNER */
+  .donate-banner {
+    background: linear-gradient(135deg, #1a3a2a, #0f2318);
+    border-top: 3px solid var(--yellow-hot);
+    border-bottom: 3px solid var(--yellow-hot);
+    padding: 3rem;
+    display: flex; align-items: center; justify-content: center;
+    gap: 3rem; flex-wrap: wrap; text-align: center;
+  }
+  .donate-banner-text h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--yellow-ball); letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .donate-banner-text p { font-size: 1rem; color: rgba(245,240,232,0.75); max-width: 400px; line-height: 1.6; }
+  .donate-heart { font-size: 3rem; animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+
+  /* IMPACT COUNTER */
+  .counter-section {
+    background: linear-gradient(135deg, #0f2318 0%, var(--green-deep) 100%);
+    border-top: 3px solid var(--yellow-ball); border-bottom: 3px solid var(--yellow-ball);
+    padding: 4rem 3rem; text-align: center; position: relative; overflow: hidden;
+  }
+  .counter-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(212,225,87,0.08) 0%, transparent 70%); }
+  .counter-inner { position: relative; z-index: 1; }
+  .counter-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 1rem; }
+  .counter-display { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem; }
+  .counter-number { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 15vw, 10rem); color: var(--yellow-ball); line-height: 1; text-shadow: 0 0 60px rgba(212,225,87,0.4); letter-spacing: 0.02em; }
+  .counter-plus { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 8vw, 6rem); color: var(--green-bright); line-height: 1; }
+  .counter-label { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cream); margin-bottom: 0.5rem; }
+  .counter-sub { font-size: 0.95rem; color: rgba(245,240,232,0.55); letter-spacing: 0.05em; }
+  .counter-bar-wrap { max-width: 500px; margin: 2rem auto 0; background: rgba(255,255,255,0.08); height: 8px; border-radius: 4px; overflow: hidden; }
+  .counter-bar { height: 100%; background: linear-gradient(90deg, var(--green-bright), var(--yellow-ball)); border-radius: 4px; width: 0; transition: width 2s ease; }
+
+  /* SECTION */
+  section { padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 0.75rem; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 1.5rem; }
+  .section-title span { color: var(--yellow-ball); }
+
+  /* HOW IT WORKS */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .step { background: rgba(45,106,79,0.2); border: 1px solid rgba(82,183,136,0.25); padding: 2rem; position: relative; transition: transform 0.3s, border-color 0.3s; }
+  .step:hover { transform: translateY(-6px); border-color: var(--yellow-ball); }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: rgba(212,225,87,0.15); position: absolute; top: 0.5rem; right: 1rem; line-height: 1; }
+  .step-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .step h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: var(--yellow-ball); }
+  .step p { font-size: 0.95rem; line-height: 1.65; color: rgba(245,240,232,0.8); }
+
+  /* GALLERY */
+  .gallery-section { padding: 5rem 3rem; max-width: 1100px; margin: 0 auto; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+  .gallery-item { position: relative; overflow: hidden; background: rgba(45,106,79,0.15); border: 2px dashed rgba(82,183,136,0.3); cursor: pointer; transition: border-color 0.3s, transform 0.3s; aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .gallery-item:hover { border-color: var(--yellow-ball); transform: scale(1.02); }
+  .gallery-item.large { grid-column: span 2; aspect-ratio: 16/9; }
+  .gallery-placeholder { text-align: center; padding: 1.5rem; pointer-events: none; }
+  .gallery-placeholder .icon { font-size: 2.5rem; margin-bottom: 0.5rem; opacity: 0.5; }
+  .gallery-placeholder .label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(245,240,232,0.4); }
+  .gallery-upload-hint { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.35); font-style: italic; }
+
+  /* IMPACT CARDS */
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .impact-card { background: linear-gradient(135deg, rgba(45,106,79,0.3), rgba(26,58,42,0.5)); border-left: 4px solid var(--green-bright); padding: 2rem; }
+  .impact-card.highlight { border-left-color: var(--yellow-ball); }
+  .impact-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: var(--green-bright); }
+  .impact-card.highlight h3 { color: var(--yellow-ball); }
+  .impact-card p { font-size: 0.95rem; line-height: 1.7; color: rgba(245,240,232,0.82); }
+
+  /* AFFILIATES */
+  .affiliates { padding: 4rem 3rem; max-width: 1100px; margin: 0 auto; text-align: center; }
+  .affiliate-logos { display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; margin-top: 2.5rem; }
+  .affiliate-badge { background: rgba(45,106,79,0.2); border: 1px solid rgba(82,183,136,0.3); padding: 1.5rem 2.5rem; transition: border-color 0.3s, transform 0.3s; text-decoration: none; display: block; }
+  .affiliate-badge:hover { border-color: var(--yellow-ball); transform: translateY(-4px); }
+  .affiliate-badge .aff-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.08em; color: var(--yellow-ball); display: block; }
+  .affiliate-badge .aff-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(245,240,232,0.5); margin-top: 0.2rem; display: block; }
+
+  /* BINS */
+  .bins-section { background: rgba(45,106,79,0.12); border-top: 2px solid rgba(82,183,136,0.2); border-bottom: 2px solid rgba(82,183,136,0.2); padding: 5rem 3rem; text-align: center; }
+  .bins-section .inner { max-width: 1000px; margin: 0 auto; }
+  .bins-section p { font-size: 1.1rem; line-height: 1.75; color: rgba(245,240,232,0.85); margin-bottom: 2rem; }
+  .map-container { margin: 2.5rem auto 2rem; border: 2px solid rgba(82,183,136,0.35); overflow: hidden; max-width: 900px; }
+  .location-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem auto; max-width: 900px; text-align: left; }
+  .loc-card { background: rgba(45,106,79,0.2); border: 1px solid rgba(82,183,136,0.25); padding: 1.2rem; transition: border-color 0.2s, transform 0.2s; }
+  .loc-card:hover { border-color: var(--yellow-ball); transform: translateY(-3px); }
+  .loc-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .loc-name { font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--yellow-ball); margin-bottom: 0.3rem; }
+  .loc-addr { font-size: 0.8rem; color: rgba(245,240,232,0.55); margin-bottom: 0.6rem; line-height: 1.4; }
+  .loc-link { font-size: 0.8rem; font-weight: 700; color: var(--green-bright); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; }
+  .loc-link:hover { color: var(--yellow-ball); }
+  .map-container iframe { display: block; width: 100%; height: 420px; border: none; }
+  .location-pins { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1.5rem auto; max-width: 800px; }
+  .pin-badge { background: rgba(45,106,79,0.25); border: 1px solid rgba(82,183,136,0.3); padding: 0.5rem 1.1rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--yellow-ball); display: flex; align-items: center; gap: 0.4rem; }
+  .pin-badge::before { content: '📍'; font-size: 0.9rem; }
+
+  /* CONTACT SECTION */
+  .contact-section {
+    padding: 5rem 3rem; max-width: 800px; margin: 0 auto;
+  }
+  .contact-wrap {
+    display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; align-items: start; margin-top: 2.5rem;
+  }
+  .contact-info h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--yellow-ball); margin-bottom: 1rem; letter-spacing: 0.05em; }
+  .contact-info p { font-size: 0.95rem; line-height: 1.7; color: rgba(245,240,232,0.75); margin-bottom: 1.5rem; }
+  .contact-info .donate-cta { margin-top: 1.5rem; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-field label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-bright); }
+  .form-field input,
+  .form-field textarea {
+    background: rgba(45,106,79,0.15);
+    border: 1px solid rgba(82,183,136,0.35);
+    color: var(--cream);
+    padding: 0.85rem 1rem;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    resize: vertical;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus { border-color: var(--yellow-ball); background: rgba(45,106,79,0.25); }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder { color: rgba(245,240,232,0.3); }
+  .form-field textarea { min-height: 130px; }
+  .form-submit { background: var(--yellow-hot); color: var(--green-deep); padding: 1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); transition: background 0.2s, transform 0.2s; align-self: flex-start; }
+  .form-submit:hover { background: var(--yellow-ball); transform: translateY(-2px); }
+  .form-success { display: none; background: rgba(82,183,136,0.15); border: 1px solid var(--green-bright); padding: 1.2rem 1.5rem; font-size: 0.95rem; color: var(--green-bright); margin-top: 0.5rem; }
+
+  /* CTA */
+  .cta-section { text-align: center; padding: 5rem 3rem; position: relative; overflow: hidden; }
+  .cta-section::before { content: 'RALLY'; position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 20rem; color: rgba(82,183,136,0.05); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; white-space: nowrap; }
+  .cta-section p { font-size: 1.15rem; max-width: 500px; margin: 1rem auto 2.5rem; color: rgba(245,240,232,0.8); line-height: 1.7; }
+
+  /* FOOTER */
+  footer { background: #0f2318; padding: 2rem 3rem; border-top: 2px solid var(--green-mid); }
+  .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--yellow-ball); letter-spacing: 0.08em; }
+  .footer-partners { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+  .footer-partners a { font-size: 0.85rem; color: var(--green-bright); text-decoration: none; }
+  .footer-partners a:hover { text-decoration: underline; }
+  .footer-divider { border: none; border-top: 1px solid rgba(82,183,136,0.15); margin: 1rem 0; }
+
+  @media (max-width: 768px) {
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-item.large { grid-column: span 2; }
+    .impact-grid { grid-template-columns: 1fr; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+    .donate-banner { gap: 1.5rem; }
+  }
+  @media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item.large { grid-column: span 1; aspect-ratio: 4/3; }
+    nav { padding: 1rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" style="display:flex;align-items:center;text-decoration:none;"><img src="rally-for-green-logo.svg" alt="Rally for Green" style="height:52px;width:52px;border-radius:50%;"></a>
+  <ul>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#counter">Impact</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#bins">Find a Bin</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://gofund.me/87a9d12f6" target="_blank" class="nav-donate">💚 Donate</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="ball ball-1"></div>
+  <div class="ball ball-2"></div>
+  <div class="ball ball-3"></div>
+  <div class="ball ball-4"></div>
+  <div class="hero-content">
+    <img src="rally-for-green-logo.svg" alt="Rally for Green Logo" style="width:130px;height:130px;margin-bottom:1.5rem;display:block;border-radius:50%;">
+    <div class="hero-tag">🎾 Community Green Initiative</div>
+    <h1>
+      Don't
+      <span class="accent">Trash</span>
+      The <span class="accent2">Ball.</span>
+    </h1>
+    <p class="hero-desc">
+      Rally for Green is a community-led tennis ball recycling program. We collect used balls,
+      keep them out of landfills, and give them a second life — as court surfaces, animal toys,
+      and donations to local shelters.
+    </p>
+    <div class="hero-cta">
+      <a href="#bins" class="btn-primary">Find a Drop-Off Bin</a>
+      <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate">💚 Donate</a>
+      <a href="#how" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">330M+</div>
+    <div class="stat-label">Tennis balls discarded yearly in the US</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">400 Yrs</div>
+    <div class="stat-label">Time for a tennis ball to decompose</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Of collected balls recycled or reused</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">Local</div>
+    <div class="stat-label">Shelters & community spaces served</div>
+  </div>
+</div>
+
+<!-- DONATE BANNER -->
+<div class="donate-banner">
+  <div class="donate-heart">💚</div>
+  <div class="donate-banner-text">
+    <h3>Support the Mission</h3>
+    <p>Your donation helps us expand our bin network, cover shipping costs, and keep more balls out of landfills. Every dollar makes a difference.</p>
+  </div>
+  <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.2rem; padding: 1rem 2.5rem;">Donate on GoFundMe</a>
+</div>
+
+<!-- IMPACT COUNTER -->
+<div class="counter-section" id="counter">
+  <div class="counter-inner">
+    <div class="counter-eyebrow">Our Running Total</div>
+    <div class="counter-display">
+      <div class="counter-number" id="counterNum">0</div>
+      <div class="counter-plus">+</div>
+    </div>
+    <div class="counter-label">Tennis Balls Collected &amp; Recycled</div>
+    <div class="counter-sub">and counting — every ball makes a difference</div>
+    <div class="counter-bar-wrap">
+      <div class="counter-bar" id="counterBar"></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-tag">The Process</div>
+  <h2 class="section-title">How It <span>Works</span></h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon">🎾</div>
+      <h3>Drop Your Balls</h3>
+      <p>Find one of our collection bins placed around the community at tennis courts, clubs, and recreation centers. Drop in your used tennis balls — any brand, any condition.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon">📦</div>
+      <h3>We Collect &amp; Sort</h3>
+      <p>Our team gathers the bins regularly and sorts the balls. Balls that can still bounce head to shelters. The rest go to our recycling partners.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon">♻️</div>
+      <h3>Recycled &amp; Repurposed</h3>
+      <p>We ship to our partners at <strong>RecycleBalls.org</strong> and affiliate <strong>BallBack.org</strong>, where balls are repressurized or ground into rubber surfaces for courts and playgrounds.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-icon">🐾</div>
+      <h3>Shared With Shelters</h3>
+      <p>Gently used balls are donated to nearby animal shelters as toys, bringing joy to dogs waiting for their forever homes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<div class="gallery-section" id="gallery">
+  <div class="section-tag">In the Community</div>
+  <h2 class="section-title">See It In <span>Action</span></h2>
+  <div class="gallery-grid">
+    <div class="gallery-item large">
+      <div class="gallery-placeholder">
+        <div class="icon">📸</div>
+        <div class="label">Bins in the Community — Wide Shot</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">🗑️</div>
+        <div class="label">Drop-Off Bin Location</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">🎾</div>
+        <div class="label">Balls Collected</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">📦</div>
+        <div class="label">Packed &amp; Ready to Ship</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <div class="icon">🚚</div>
+        <div class="label">Shipment Going Out</div>
+      </div>
+    </div>
+    <div class="gallery-item" style="border: 2px solid rgba(82,183,136,0.5); aspect-ratio: 3/4;">
+      <img src="shelter-donation.jpg" alt="Shelter donation — tennis balls for pets" style="width:100%;height:100%;object-fit:contain;display:block;background:#1a3a2a;" />
+    </div>
+  </div>
+  <p class="gallery-upload-hint">📷 Photos coming soon — follow our journey!</p>
+</div>
+
+<!-- IMPACT CARDS -->
+<section id="impact" style="background: none;">
+  <div class="section-tag">Why It Matters</div>
+  <h2 class="section-title">Our <span>Impact</span></h2>
+  <div class="impact-grid">
+    <div class="impact-card highlight">
+      <h3>🌍 Keeping Rubber Out of Landfills</h3>
+      <p>Tennis balls are made from pressurized rubber and felt — materials that take centuries to break down. Every ball we collect is one less ball sitting in a landfill for generations.</p>
+    </div>
+    <div class="impact-card">
+      <h3>🎾 New Life as Court Surfaces</h3>
+      <p>Through our partnership with RecycleBalls.org, used balls are ground into crumb rubber and used to build and resurface tennis courts and playgrounds in underserved communities.</p>
+    </div>
+    <div class="impact-card">
+      <h3>🐶 Joy for Shelter Animals</h3>
+      <p>Dogs at local shelters love to play. We donate still-bouncy balls to nearby animal shelters, giving animals enrichment and comfort while they wait for adoption.</p>
+    </div>
+    <div class="impact-card highlight">
+      <h3>🤝 Community in Action</h3>
+      <p>This program started with one young person and a big idea. Today it's growing across our community — proof that grassroots action creates real, lasting change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AFFILIATES -->
+<div class="affiliates">
+  <div class="section-tag" style="text-align:center">Our Partners &amp; Affiliates</div>
+  <h2 class="section-title" style="text-align:center">Who We <span>Work With</span></h2>
+  <div class="affiliate-logos">
+    <a href="https://www.recycleballs.org" target="_blank" class="affiliate-badge">
+      <span class="aff-name">RecycleBalls.org</span>
+      <span class="aff-label">Recycling Partner — Court Surfaces</span>
+    </a>
+    <a href="https://www.ballback.org" target="_blank" class="affiliate-badge">
+      <span class="aff-name">BallBack.org</span>
+      <span class="aff-label">Affiliate Partner — Ball Repressurization</span>
+    </a>
+  </div>
+</div>
+
+<!-- BINS -->
+<div class="bins-section" id="bins">
+  <div class="inner">
+    <div class="section-tag" style="text-align:center">Drop-Off Locations</div>
+    <h2 class="section-title" style="text-align:center">Find a <span>Bin</span></h2>
+    <p>Collection bins are located across the Dallas area. Drop off your used tennis balls at any of our current locations. Look for the green Rally for Green bin!</p>
+    <div class="location-pins">
+      <div class="pin-badge">Flower Mound HS</div>
+      <div class="pin-badge">Marcus HS</div>
+      <div class="pin-badge">Argyle Middle School</div>
+      <div class="pin-badge">Byron Nelson HS</div>
+      <div class="pin-badge">Carroll HS</div>
+    </div>
+    <div class="location-cards">
+      <div class="loc-card">
+        <div class="loc-icon">🎾</div>
+        <div class="loc-name">Flower Mound High School</div>
+        <div class="loc-addr">3411 Peters Colony Rd, Flower Mound TX</div>
+        <a href="https://maps.google.com/?cid=1494598335925802517" target="_blank" class="loc-link">Get Directions →</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🎾</div>
+        <div class="loc-name">Marcus High School</div>
+        <div class="loc-addr">5707 Morriss Rd, Flower Mound TX</div>
+        <a href="https://maps.google.com/?cid=12884906388975132129" target="_blank" class="loc-link">Get Directions →</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🎾</div>
+        <div class="loc-name">Argyle Middle School</div>
+        <div class="loc-addr">191 US-377, Argyle TX</div>
+        <a href="https://maps.google.com/?cid=8316749311499658698" target="_blank" class="loc-link">Get Directions →</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🎾</div>
+        <div class="loc-name">Byron Nelson High School</div>
+        <div class="loc-addr">2775 Bobcat Blvd, Trophy Club TX</div>
+        <a href="https://maps.google.com/?cid=18163858828133843645" target="_blank" class="loc-link">Get Directions →</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🎾</div>
+        <div class="loc-name">Carroll High School</div>
+        <div class="loc-addr">800 N White Chapel Blvd, Southlake TX</div>
+        <a href="https://maps.google.com/?cid=16958988759889703360" target="_blank" class="loc-link">Get Directions →</a>
+      </div>
+    </div>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d107265.5!2d-97.13!3d33.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x864c4b1c042b2f47%3A0x14abf8e4e37b56d5!2sFlower+Mound+High+School%2C+3411+Peters+Colony+Rd%2C+Flower+Mound%2C+TX+75022!3m2!1d33.0332087!2d-97.0820777!4m5!1s0x864c4c9f975bd205%3A0xb29b101f77d21be1!2sMarcus+High+School%2C+5707+Morriss+Rd%2C+Flower+Mound%2C+TX+75028!3m2!1d33.0643567!2d-97.0625718!4m5!1s0x864cced9b484dddb%3A0x6b697a94e96de5ca!2sArgyle+Middle+School%2C+191+US-377%2C+Argyle%2C+TX+76226!3m2!1d33.1069728!2d-97.1853955!4m5!1s0x864cd1bd20bcd183%3A0xfc4203153fb89dfd!2sByron+Nelson+High+School%2C+2775+Bobcat+Blvd%2C+Trophy+Club%2C+TX+76262!3m2!1d33.018858!2d-97.2027756!4m5!1s0x864cd46fd87bfd3d%3A0xeb5111aed86c11c0!2sCarroll+High+School%2C+800+N+White+Chapel+Blvd%2C+Southlake%2C+TX+76092!3m2!1d32.9515295!2d-97.153196!5e0!3m2!1sen!2sus!4v1700000000000"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <p style="font-size:0.95rem; color: rgba(245,240,232,0.6); margin-bottom: 2rem;">Want to host a bin at your facility or club? We'd love to partner with you.</p>
+    <a href="#contact" class="btn-primary">Request a Bin</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact" style="max-width:1000px; margin:0 auto;">
+  <div class="section-tag">Get In Touch</div>
+  <h2 class="section-title">Contact <span>Us</span></h2>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h3>We'd love to hear from you</h3>
+      <p>Have a question about drop-off locations, want to host a bin, or looking to get involved? Send us a message and we'll get back to you soon.</p>
+      <p style="font-size:0.9rem; color: rgba(245,240,232,0.5);">📧 blpanther@outlook.com</p>
+      <div class="donate-cta">
+        <p style="font-size:0.9rem; margin-bottom:0.75rem;">Want to support the cause?</p>
+        <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1rem; padding:0.75rem 1.5rem;">💚 Donate on GoFundMe</a>
+      </div>
+    </div>
+    <div>
+      <div class="contact-form" id="contactForm">
+        <div class="form-field">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" placeholder="Jane Smith" />
+        </div>
+        <div class="form-field">
+          <label for="femail">Email Address</label>
+          <input type="email" id="femail" placeholder="jane@example.com" />
+        </div>
+        <div class="form-field">
+          <label for="fmessage">Message</label>
+          <textarea id="fmessage" placeholder="Tell us how we can help..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <div class="form-success" id="formSuccess">✅ Thanks! Your message has been sent. We'll be in touch soon.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section" id="join">
+  <div class="section-tag" style="display:block; text-align:center">Get Involved</div>
+  <h2 class="section-title" style="font-size: clamp(3rem, 6vw, 5rem);">Join the <span>Rally</span></h2>
+  <p>Whether you're a player, a club, a school, or just someone who cares — there's a place for you in this movement.</p>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.1rem;">💚 Donate on GoFundMe</a>
+    <a href="https://www.recycleballs.org" target="_blank" class="btn-outline">RecycleBalls.org</a>
+    <a href="https://www.ballback.org" target="_blank" class="btn-outline">BallBack.org</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <img src="rally-for-green-logo.svg" alt="Rally for Green" style="height:60px;width:60px;border-radius:50%;">
+    <p>A youth-led community initiative 🌱</p>
+    <div class="footer-partners">
+      <span style="font-size:0.8rem;color:rgba(245,240,232,0.4);text-transform:uppercase;letter-spacing:0.1em;">Partners:</span>
+      <a href="https://www.recycleballs.org" target="_blank">RecycleBalls.org</a>
+      <a href="https://www.ballback.org" target="_blank">BallBack.org</a>
+      <a href="https://gofund.me/87a9d12f6" target="_blank" style="color: var(--yellow-ball);">💚 Donate</a>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <p style="text-align:center; font-size:0.8rem; color:rgba(245,240,232,0.35);">© 2025 Rally for Green. Making every ball count.</p>
+</footer>
+
+<script>
+  // Animated counter
+  const TARGET = 3200;
+  const DURATION = 2200;
+
+  function animateCounter() {
+    const el = document.getElementById('counterNum');
+    const bar = document.getElementById('counterBar');
+    const NEXT_MILESTONE = 5000;
+    let start = null;
+    setTimeout(() => { bar.style.width = (TARGET / NEXT_MILESTONE * 100) + '%'; }, 100);
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / DURATION, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * TARGET).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = TARGET.toLocaleString();
+    }
+    requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCounter(); observer.disconnect(); } });
+  }, { threshold: 0.3 });
+  observer.observe(document.getElementById('counter'));
+
+  // Contact form — opens mailto
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const message = document.getElementById('fmessage').value.trim();
+    if (!name || !email || !message) {
+      alert('Please fill in all fields before sending.');
+      return;
+    }
+    const subject = encodeURIComponent('Rally for Green — Message from ' + name);
+    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+    window.location.href = 'mailto:blpanther@outlook.com?subject=' + subject + '&body=' + body;
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('fname').value = '';
+    document.getElementById('femail').value = '';
+    document.getElementById('fmessage').value = '';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg width="500" height="500" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Rally for Green logo</title>
+  <desc>Circular badge with tennis ball, three recycling arrows inside, Rally for Green text outside on yellow-green ring</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#d4e157"/>
+    </marker>
+    <path id="topText" d="M 48,300 A 252,252 0 1,1 552,300"/>
+    <path id="botText" d="M 68,348 A 236,236 0 0,0 532,348"/>
+  </defs>
+  <circle cx="300" cy="300" r="295" fill="#e9f5a1"/>
+  <circle cx="300" cy="300" r="220" fill="#1a3a2a"/>
+  <circle cx="300" cy="300" r="220" fill="none" stroke="#d4e157" stroke-width="4"/>
+  <circle cx="300" cy="300" r="205" fill="none" stroke="#2d6a4f" stroke-width="1.5"/>
+  <circle cx="300" cy="300" r="65" fill="#c8dc3a"/>
+  <path d="M 252,274 Q 278,300 252,326" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 348,274 Q 322,300 348,326" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 260.7,191.9 A 115,115 0 0,1 413.3,280.0" fill="none" stroke="#d4e157" stroke-width="9" stroke-linecap="round" marker-end="url(#ah)"/>
+  <path d="M 413.3,320.0 A 115,115 0 0,1 260.7,408.1" fill="none" stroke="#d4e157" stroke-width="9" stroke-linecap="round" marker-end="url(#ah)"/>
+  <path d="M 226.1,388.1 A 115,115 0 0,1 226.1,211.9" fill="none" stroke="#d4e157" stroke-width="9" stroke-linecap="round" marker-end="url(#ah)"/>
+  <circle cx="300" cy="80" r="4" fill="#d4e157"/>
+  <circle cx="300" cy="524" r="4" fill="#52b788"/>
+  <text font-family="Georgia, serif" font-size="32" font-weight="700" fill="#1a3a2a" stroke="#e9f5a1" stroke-width="5" paint-order="stroke" letter-spacing="10">
+    <textPath href="#topText" startOffset="50%" text-anchor="middle">RALLY FOR GREEN</textPath>
+  </text>
+  <text font-family="Georgia, serif" font-size="20" font-weight="700" fill="#1a3a2a" stroke="#e9f5a1" stroke-width="4" paint-order="stroke" letter-spacing="5">
+    <textPath href="#botText" startOffset="50%" text-anchor="middle">RECYCLE · REUSE · RALLY</textPath>
+  </text>
+</svg>
