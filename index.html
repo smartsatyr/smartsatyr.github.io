@@ -220,6 +220,7 @@
   .footer-divider { border: none; border-top: 1px solid rgba(82,183,136,0.15); margin: 1rem 0; }
 
   @media (max-width: 768px) {
+    #about > div > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
     .gallery-grid { grid-template-columns: 1fr 1fr; }
     .gallery-item.large { grid-column: span 2; }
     .impact-grid { grid-template-columns: 1fr; }
@@ -241,6 +242,7 @@
 <nav>
   <a href="#" style="display:flex;align-items:center;text-decoration:none;"><img src="rally-for-green-logo.svg" alt="Rally for Green" style="height:52px;width:52px;border-radius:50%;"></a>
   <ul>
+    <li><a href="#about">About</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#counter">Impact</a></li>
     <li><a href="#gallery">Gallery</a></li>
@@ -323,6 +325,54 @@
     </div>
   </div>
 </div>
+
+
+<!-- ABOUT -->
+<section id="about" style="background:none; max-width:1100px; margin:0 auto; padding: 5rem 3rem;">
+  <div class="section-tag">Our Story</div>
+  <h2 class="section-title">About <span>Rally for Green</span></h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2.5rem; align-items:start;">
+
+    <!-- Founder card -->
+    <div style="background:linear-gradient(135deg,rgba(45,106,79,0.25),rgba(26,58,42,0.5)); border:1px solid rgba(212,225,87,0.3); padding:2.5rem;">
+      <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+        <img src="rally-for-green-logo.svg" alt="Rally for Green" style="width:64px;height:64px;border-radius:50%;flex-shrink:0;">
+        <div>
+          <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:var(--yellow-ball); letter-spacing:0.05em; line-height:1;">Tejas Kumar</div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--green-bright); margin-top:0.2rem;">Founder &amp; Program Lead</div>
+        </div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:1.5rem;">
+        <span style="background:rgba(82,183,136,0.15); border:1px solid rgba(82,183,136,0.3); padding:0.3rem 0.8rem; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-bright);">Age 16</span>
+        <span style="background:rgba(82,183,136,0.15); border:1px solid rgba(82,183,136,0.3); padding:0.3rem 0.8rem; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-bright);">Rising Junior</span>
+        <span style="background:rgba(82,183,136,0.15); border:1px solid rgba(82,183,136,0.3); padding:0.3rem 0.8rem; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-bright);">FMHS JV Tennis</span>
+        <span style="background:rgba(82,183,136,0.15); border:1px solid rgba(82,183,136,0.3); padding:0.3rem 0.8rem; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--green-bright);">Flower Mound, TX</span>
+      </div>
+      <p style="font-size:0.98rem; line-height:1.8; color:rgba(245,240,232,0.85);">
+        I'm a 16-year-old rising junior at Flower Mound High School and a Junior Varsity tennis player for the Jaguars. When I decided to make my mark on the community, I looked for a problem that was real, local, and meaningful — and found it right on the court.
+      </p>
+    </div>
+
+    <!-- Mission text -->
+    <div>
+      <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--yellow-ball); letter-spacing:0.05em; margin-bottom:1rem; line-height:1.1;">One Player.<br>One Big Idea.</h3>
+      <p style="font-size:1rem; line-height:1.85; color:rgba(245,240,232,0.85); margin-bottom:1.2rem;">
+        I wanted to do more than play tennis — I wanted to use my passion for the sport to drive real environmental impact in Texas. Millions of tennis balls are thrown away every year, sitting in landfills for centuries. I saw that problem and decided to do something about it.
+      </p>
+      <p style="font-size:1rem; line-height:1.85; color:rgba(245,240,232,0.85); margin-bottom:1.2rem;">
+        I launched Rally for Green by placing collection bins at schools and courts across the Dallas area, partnering with national recycling organizations, and personally coordinating donations to local animal shelters. What started as my own initiative has grown into a community-wide movement — and I'm just getting started.
+      </p>
+      <p style="font-size:1rem; line-height:1.85; color:rgba(245,240,232,0.85);">
+        I believe you don't have to wait to make a difference. You just have to serve first.
+      </p>
+      <div style="margin-top:2rem; padding:1.2rem 1.5rem; border-left:4px solid var(--yellow-ball); background:rgba(212,225,87,0.07);">
+        <p style="font-size:1.05rem; font-style:italic; color:var(--yellow-ball); line-height:1.7;">"I love tennis and I love where I live. I wanted to find a way to give back using both."</p>
+        <p style="font-size:0.85rem; color:rgba(245,240,232,0.5); margin-top:0.5rem;">— Tejas Kumar, Founder</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- HOW IT WORKS -->
 <section id="how">
@@ -443,7 +493,12 @@
   <div class="inner">
     <div class="section-tag" style="text-align:center">Drop-Off Locations</div>
     <h2 class="section-title" style="text-align:center">Find a <span>Bin</span></h2>
-    <p>Collection bins are located across the Dallas area. Drop off your used tennis balls at any of our current locations. Look for the green Rally for Green bin!</p>
+    <p>Have used tennis balls at home? Instead of tossing them in the trash, bring them to one of our collection bins located at schools across the Dallas–Fort Worth area. It takes just a minute — and every ball you drop off stays out of a landfill, gets recycled into court surfaces, or brings joy to a shelter dog waiting for a home.</p>
+    <p style="font-size:0.95rem; color:rgba(245,240,232,0.75); margin-top:-0.5rem; margin-bottom:1rem;">Any brand. Any condition. All welcome. 🎾</p>
+    <div style="background:rgba(212,225,87,0.08); border:1px solid rgba(212,225,87,0.3); padding:1rem 1.5rem; max-width:700px; margin:0 auto 2rem; text-align:center;">
+      <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--yellow-ball);">🌟 We're just getting started in DFW — but our goal is all of Texas.</span>
+      <p style="font-size:0.9rem; color:rgba(245,240,232,0.65); margin-top:0.4rem; margin-bottom:0;">If you're outside the DFW area, stay tuned — or reach out to help us expand to your city.</p>
+    </div>
     <div class="location-pins">
       <div class="pin-badge">Flower Mound HS</div>
       <div class="pin-badge">Marcus HS</div>
@@ -489,22 +544,48 @@
         allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-    <p style="font-size:0.95rem; color: rgba(245,240,232,0.6); margin-bottom: 2rem;">Want to host a bin at your facility or club? We'd love to partner with you.</p>
-    <a href="#contact" class="btn-primary">Request a Bin</a>
+    <p style="font-size:0.95rem; color:rgba(245,240,232,0.6); margin-bottom:0.5rem;">Are you a club, facility, or organization that wants to host a bin? We'd love to grow our network with you.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+      <a href="#contact" class="btn-primary">Request a Bin Location</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
   </div>
 </div>
 
 <!-- CONTACT -->
 <div class="contact-section" id="contact" style="max-width:1000px; margin:0 auto;">
-  <div class="section-tag">Get In Touch</div>
-  <h2 class="section-title">Contact <span>Us</span></h2>
+  <div class="section-tag">Partner With Us</div>
+  <h2 class="section-title">Bring Rally for Green <span>To Your School or Club</span></h2>
   <div class="contact-wrap">
     <div class="contact-info">
-      <h3>We'd love to hear from you</h3>
-      <p>Have a question about drop-off locations, want to host a bin, or looking to get involved? Send us a message and we'll get back to you soon.</p>
-      <p style="font-size:0.9rem; color: rgba(245,240,232,0.5);">📧 blpanther@outlook.com</p>
+      <h3>Are you a high school or country club?</h3>
+      <p>We're actively looking to expand our bin network across the Dallas–Fort Worth area. If your school tennis team, athletic department, or country club generates used tennis balls, we'd love to place a collection bin at your facility — at no cost to you.</p>
+      <p style="font-size:0.95rem; line-height:1.7; color:rgba(245,240,232,0.7); margin-bottom:0.8rem;">Joining Rally for Green is simple. We handle the bin, the pickups, and the recycling logistics. All you do is collect the balls and we'll take it from there.</p>
+      <div style="background:rgba(82,183,136,0.1); border-left:3px solid var(--green-bright); padding:0.9rem 1.2rem; margin-bottom:1.2rem;">
+        <p style="font-size:0.95rem; font-weight:600; color:var(--green-bright); margin-bottom:0.3rem;">📍 Currently serving the DFW area — with Texas in our sights.</p>
+        <p style="font-size:0.88rem; color:rgba(245,240,232,0.65); margin-bottom:0;">Our mission is to expand Rally for Green to schools and clubs across the entire state of Texas. Whether you're in Houston, Austin, San Antonio, or anywhere in between — we want to hear from you. Help us bring this program to your community.</p>
+      </div>
+      <div style="margin-bottom:1.5rem;">
+        <div style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+          <span style="color:var(--yellow-ball); font-size:1.1rem;">✔</span>
+          <span style="font-size:0.9rem; color:rgba(245,240,232,0.75);">Free bin placement at your location</span>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+          <span style="color:var(--yellow-ball); font-size:1.1rem;">✔</span>
+          <span style="font-size:0.9rem; color:rgba(245,240,232,0.75);">We coordinate all pickups and shipping</span>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+          <span style="color:var(--yellow-ball); font-size:1.1rem;">✔</span>
+          <span style="font-size:0.9rem; color:rgba(245,240,232,0.75);">100% of balls recycled or donated to shelters</span>
+        </div>
+        <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+          <span style="color:var(--yellow-ball); font-size:1.1rem;">✔</span>
+          <span style="font-size:0.9rem; color:rgba(245,240,232,0.75);">Your school or club recognized as a partner</span>
+        </div>
+      </div>
+      <p style="font-size:0.9rem; color: rgba(245,240,232,0.45);">📧 blpanther@outlook.com</p>
       <div class="donate-cta">
-        <p style="font-size:0.9rem; margin-bottom:0.75rem;">Want to support the cause?</p>
+        <p style="font-size:0.9rem; margin-bottom:0.75rem;">Want to support the cause financially?</p>
         <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1rem; padding:0.75rem 1.5rem;">💚 Donate on GoFundMe</a>
       </div>
     </div>
@@ -512,15 +593,19 @@
       <div class="contact-form" id="contactForm">
         <div class="form-field">
           <label for="fname">Your Name</label>
-          <input type="text" id="fname" placeholder="Jane Smith" />
+          <input type="text" id="fname" placeholder="e.g. Coach Sarah Johnson" />
+        </div>
+        <div class="form-field">
+          <label for="forg">School or Club Name</label>
+          <input type="text" id="forg" placeholder="e.g. Southlake Carroll HS / Stonebriar Country Club" />
         </div>
         <div class="form-field">
           <label for="femail">Email Address</label>
-          <input type="email" id="femail" placeholder="jane@example.com" />
+          <input type="email" id="femail" placeholder="you@yourschool.edu" />
         </div>
         <div class="form-field">
-          <label for="fmessage">Message</label>
-          <textarea id="fmessage" placeholder="Tell us how we can help..."></textarea>
+          <label for="fmessage">How Can We Help?</label>
+          <textarea id="fmessage" placeholder="Tell us about your interest — hosting a bin, partnering with us, or anything else..."></textarea>
         </div>
         <button class="form-submit" onclick="submitForm()">Send Message →</button>
         <div class="form-success" id="formSuccess">✅ Thanks! Your message has been sent. We'll be in touch soon.</div>
@@ -538,6 +623,23 @@
     <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.1rem;">💚 Donate on GoFundMe</a>
     <a href="https://www.recycleballs.org" target="_blank" class="btn-outline">RecycleBalls.org</a>
     <a href="https://www.ballback.org" target="_blank" class="btn-outline">BallBack.org</a>
+  </div>
+
+  <!-- REFERRAL BOX -->
+  <div style="margin-top:4rem; max-width:600px; margin-left:auto; margin-right:auto; background:rgba(45,106,79,0.2); border:1px solid rgba(212,225,87,0.3); padding:2.5rem; position:relative; z-index:1;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-bright); margin-bottom:0.6rem;">Spread the Word</div>
+    <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--yellow-ball); letter-spacing:0.05em; margin-bottom:0.75rem; line-height:1.1;">Know a Coach or Club Director?</h3>
+    <p style="font-size:0.97rem; line-height:1.75; color:rgba(245,240,232,0.8); margin-bottom:1.5rem;">If you know a tennis coach, athletic director, or country club manager who should be part of Rally for Green, enter their email below and we'll send them the website directly. Help us grow this program one court at a time.</p>
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+      <input type="email" id="referralEmail" placeholder="coach@theirschool.edu"
+        style="flex:1; min-width:200px; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
+        onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+      <button onclick="sendReferral()" class="btn-primary" style="white-space:nowrap;">Send the Site →</button>
+    </div>
+    <div id="referralSuccess" style="display:none; margin-top:1rem; background:rgba(82,183,136,0.15); border:1px solid var(--green-bright); padding:0.9rem 1.2rem; font-size:0.92rem; color:var(--green-bright);">
+      ✅ Done! We'll send Rally for Green their way.
+    </div>
+    <p style="font-size:0.78rem; color:rgba(245,240,232,0.3); margin-top:1rem; margin-bottom:0;">We'll send one friendly email on your behalf — no spam, ever.</p>
   </div>
 </div>
 
@@ -584,6 +686,22 @@
   }, { threshold: 0.3 });
   observer.observe(document.getElementById('counter'));
 
+  // Referral sender
+  function sendReferral() {
+    const email = document.getElementById('referralEmail').value.trim();
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    const subject = encodeURIComponent('Check out Rally for Green — Tennis Ball Recycling Program');
+    const body = encodeURIComponent(
+      'Hi,\n\nI wanted to share a great initiative with you — Rally for Green, a youth-led tennis ball recycling program based in the Dallas–Fort Worth area with a mission to expand across Texas.\n\nThey collect used tennis balls at schools and country clubs, keep them out of landfills, and recycle them into court surfaces or donate them to animal shelters.\n\nThey are looking to partner with schools and clubs like yours — at no cost to you. Learn more and get in touch at the website below.\n\nRally for Green: https://rallyforgreen.com\n\nHope you find this as inspiring as I do!'
+    );
+    window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+    document.getElementById('referralSuccess').style.display = 'block';
+    document.getElementById('referralEmail').value = '';
+  }
+
   // Contact form — opens mailto
   function submitForm() {
     const name = document.getElementById('fname').value.trim();
@@ -594,7 +712,8 @@
       return;
     }
     const subject = encodeURIComponent('Rally for Green — Message from ' + name);
-    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+    const org = document.getElementById('forg') ? document.getElementById('forg').value.trim() : '';
+    const body = encodeURIComponent('Name: ' + name + '\nOrganization: ' + org + '\nEmail: ' + email + '\n\nMessage:\n' + message);
     window.location.href = 'mailto:blpanther@outlook.com?subject=' + subject + '&body=' + body;
     document.getElementById('formSuccess').style.display = 'block';
     document.getElementById('fname').value = '';
