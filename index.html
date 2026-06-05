@@ -117,7 +117,7 @@
   .section-title span { color: var(--yellow-ball); }
 
   /* HOW IT WORKS */
-  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2.5rem; }
   .step { background: rgba(45,106,79,0.2); border: 1px solid rgba(82,183,136,0.25); padding: 2rem; position: relative; transition: transform 0.3s, border-color 0.3s; }
   .step:hover { transform: translateY(-6px); border-color: var(--yellow-ball); }
   .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: rgba(212,225,87,0.15); position: absolute; top: 0.5rem; right: 1rem; line-height: 1; }
@@ -134,10 +134,10 @@
   .gallery-placeholder { text-align: center; padding: 1.5rem; pointer-events: none; }
   .gallery-placeholder .icon { font-size: 2.5rem; margin-bottom: 0.5rem; opacity: 0.5; }
   .gallery-placeholder .label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(245,240,232,0.4); }
-  .gallery-upload-hint { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.35); font-style: italic; }
+  .gallery-upload-hint { text-align: center; margin-top: 2.5rem; font-size: 0.85rem; color: rgba(245,240,232,0.35); font-style: italic; }
 
   /* IMPACT CARDS */
-  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
   .impact-card { background: linear-gradient(135deg, rgba(45,106,79,0.3), rgba(26,58,42,0.5)); border-left: 4px solid var(--green-bright); padding: 2rem; }
   .impact-card.highlight { border-left-color: var(--yellow-ball); }
   .impact-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: var(--green-bright); }
@@ -179,7 +179,7 @@
   }
   .contact-info h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; color: var(--yellow-ball); margin-bottom: 1rem; letter-spacing: 0.05em; }
   .contact-info p { font-size: 0.95rem; line-height: 1.7; color: rgba(245,240,232,0.75); margin-bottom: 1.5rem; }
-  .contact-info .donate-cta { margin-top: 1.5rem; }
+  .contact-info .donate-cta { margin-top: 2.5rem; }
 
   .contact-form { display: flex; flex-direction: column; gap: 1rem; }
   .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -213,6 +213,7 @@
   /* FOOTER */
   footer { background: #0f2318; padding: 2rem 3rem; border-top: 2px solid var(--green-mid); }
   .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+  .footer-top .footer-logo + p { margin-left: 0; }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--yellow-ball); letter-spacing: 0.08em; }
   .footer-partners { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
   .footer-partners a { font-size: 0.85rem; color: var(--green-bright); text-decoration: none; }
@@ -247,7 +248,7 @@
     <li><a href="#how">How It Works</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#bins">Find a Bin</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Join the Rally</a></li>
     <li><a href="https://gofund.me/87a9d12f6" target="_blank" class="nav-donate">💚 Donate</a></li>
   </ul>
 </nav>
@@ -307,7 +308,7 @@
     <h3>Support the Mission</h3>
     <p>Your donation helps us expand our bin network, cover shipping costs, and keep more balls out of landfills. Every dollar makes a difference.</p>
   </div>
-  <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.2rem; padding: 1rem 2.5rem;">Donate on GoFundMe</a>
+  <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.2rem; padding: 1rem 2.5rem;">💚 Donate</a>
 </div>
 
 <!-- ABOUT -->
@@ -539,13 +540,42 @@
       </div>
     </div>
     <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d107265.5!2d-97.13!3d33.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x864c4b1c042b2f47%3A0x14abf8e4e37b56d5!2sFlower+Mound+High+School%2C+3411+Peters+Colony+Rd%2C+Flower+Mound%2C+TX+75022!3m2!1d33.0332087!2d-97.0820777!4m5!1s0x864c4c9f975bd205%3A0xb29b101f77d21be1!2sMarcus+High+School%2C+5707+Morriss+Rd%2C+Flower+Mound%2C+TX+75028!3m2!1d33.0643567!2d-97.0625718!4m5!1s0x864cced9b484dddb%3A0x6b697a94e96de5ca!2sArgyle+Middle+School%2C+191+US-377%2C+Argyle%2C+TX+76226!3m2!1d33.1069728!2d-97.1853955!4m5!1s0x864cd1bd20bcd183%3A0xfc4203153fb89dfd!2sByron+Nelson+High+School%2C+2775+Bobcat+Blvd%2C+Trophy+Club%2C+TX+76262!3m2!1d33.018858!2d-97.2027756!4m5!1s0x864cd46fd87bfd3d%3A0xeb5111aed86c11c0!2sCarroll+High+School%2C+800+N+White+Chapel+Blvd%2C+Southlake%2C+TX+76092!3m2!1d32.9515295!2d-97.153196!5e0!3m2!1sen!2sus!4v1700000000000"
-        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div id="binMap" style="width:100%; height:420px;"></div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var map = L.map('binMap', { zoomControl: true, scrollWheelZoom: false }).setView([33.03, -97.13], 11);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var icon = L.divIcon({
+          className: '',
+          html: '<div style="font-size:1.8rem;line-height:1;">🎾</div>',
+          iconSize: [30, 30],
+          iconAnchor: [15, 15],
+          popupAnchor: [0, -15]
+        });
+
+        var locations = [
+          { name: "Flower Mound High School", addr: "3411 Peters Colony Rd, Flower Mound TX", lat: 33.0332, lng: -97.0821 },
+          { name: "Marcus High School", addr: "5707 Morriss Rd, Flower Mound TX", lat: 33.0644, lng: -97.0626 },
+          { name: "Argyle Middle School", addr: "191 US-377, Argyle TX", lat: 33.1070, lng: -97.1854 },
+          { name: "Byron Nelson High School", addr: "2775 Bobcat Blvd, Trophy Club TX", lat: 33.0189, lng: -97.2028 },
+          { name: "Carroll High School", addr: "800 N White Chapel Blvd, Southlake TX", lat: 32.9515, lng: -97.1532 }
+        ];
+
+        locations.forEach(function(loc) {
+          L.marker([loc.lat, loc.lng], { icon: icon })
+            .addTo(map)
+            .bindPopup('<strong style="color:#1a3a2a;">' + loc.name + '</strong><br><span style="font-size:0.85rem;">' + loc.addr + '</span>');
+        });
+      });
+    </script>
     </div>
     <p style="font-size:0.95rem; color:rgba(245,240,232,0.6); margin-bottom:0.5rem;">Are you a club, facility, or organization that wants to host a bin? We'd love to grow our network with you.</p>
-    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2.5rem;">
       <a href="#contact" class="btn-primary">Request a Bin Location</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
     </div>
@@ -584,57 +614,60 @@
         </div>
       </div>
       <p style="font-size:0.9rem; color: rgba(245,240,232,0.45);">📧 blpanther@outlook.com</p>
-      <div class="donate-cta">
-        <p style="font-size:0.9rem; margin-bottom:0.75rem;">Want to support the cause financially?</p>
-        <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1rem; padding:0.75rem 1.5rem;">💚 Donate on GoFundMe</a>
-      </div>
+
     </div>
     <div>
-      <div class="contact-form" id="contactForm">
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="f5e07b0d-dc4d-4772-8679-0e29a3091e1f">
+        <input type="hidden" name="subject" value="Rally for Green — New Partner Inquiry">
+        <input type="hidden" name="redirect" value="false">
+        <!-- Honeypot spam protection -->
+        <input type="checkbox" name="botcheck" style="display:none;">
+
         <div class="form-field">
           <label for="fname">Your Name</label>
-          <input type="text" id="fname" placeholder="e.g. Coach Sarah Johnson" />
+          <input type="text" id="fname" name="name" placeholder="e.g. Coach Sarah Johnson" required />
         </div>
         <div class="form-field">
           <label for="forg">School or Club Name</label>
-          <input type="text" id="forg" placeholder="e.g. Southlake Carroll HS / Stonebriar Country Club" />
+          <input type="text" id="forg" name="organization" placeholder="e.g. Southlake Carroll HS / Stonebriar Country Club" required />
         </div>
         <div class="form-field">
           <label for="femail">Email Address</label>
-          <input type="email" id="femail" placeholder="you@yourschool.edu" />
+          <input type="email" id="femail" name="email" placeholder="you@yourschool.edu" required />
         </div>
         <div class="form-field">
           <label for="fmessage">How Can We Help?</label>
-          <textarea id="fmessage" placeholder="Tell us about your interest — hosting a bin, partnering with us, or anything else..."></textarea>
+          <textarea id="fmessage" name="message" placeholder="Tell us about your interest — hosting a bin, partnering with us, or anything else..." required></textarea>
         </div>
-        <button class="form-submit" onclick="submitForm()">Send Message →</button>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
         <div class="form-success" id="formSuccess">✅ Thanks! Your message has been sent. We'll be in touch soon.</div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
 
 <!-- CTA -->
-<div class="cta-section" id="join">
+<div class="cta-section" id="join" style="padding-top:2rem;">
   <div class="section-tag" style="display:block; text-align:center">Get Involved</div>
   <h2 class="section-title" style="font-size: clamp(3rem, 6vw, 5rem);">Join the <span>Rally</span></h2>
   <p>Whether you're a player, a club, a school, or just someone who cares — there's a place for you in this movement.</p>
-  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-    <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.1rem;">💚 Donate on GoFundMe</a>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:3rem;">
+    <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.1rem;">💚 Donate</a>
     <a href="https://www.recycleballs.org" target="_blank" class="btn-outline">RecycleBalls.org</a>
     <a href="https://www.ballback.org" target="_blank" class="btn-outline">BallBack.org</a>
   </div>
 
   <!-- REFERRAL BOX -->
-  <div style="margin-top:4rem; max-width:600px; margin-left:auto; margin-right:auto; background:rgba(45,106,79,0.2); border:1px solid rgba(212,225,87,0.3); padding:2.5rem; position:relative; z-index:1;">
+  <div style="margin-top:0.5rem; max-width:600px; margin-left:auto; margin-right:auto; background:rgba(45,106,79,0.2); border:1px solid rgba(212,225,87,0.3); padding:2.5rem; position:relative; z-index:1;">
     <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-bright); margin-bottom:0.6rem;">Spread the Word</div>
     <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--yellow-ball); letter-spacing:0.05em; margin-bottom:0.75rem; line-height:1.1;">Know a Coach or Club Director?</h3>
     <p style="font-size:0.97rem; line-height:1.75; color:rgba(245,240,232,0.8); margin-bottom:1.5rem;">If you know a tennis coach, athletic director, or country club manager who should be part of Rally for Green, enter their email below and we'll send them the website directly. Help us grow this program one court at a time.</p>
-    <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem; margin-top:1.5rem;">
       <input type="email" id="referralEmail" placeholder="coach@theirschool.edu"
         style="flex:1; min-width:200px; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
         onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
-      <button onclick="sendReferral()" class="btn-primary" style="white-space:nowrap;">Send the Site →</button>
+      <button id="referralBtn" onclick="sendReferral()" class="btn-primary" style="white-space:nowrap;">Send the Site →</button>
     </div>
     <div id="referralSuccess" style="display:none; margin-top:1rem; background:rgba(82,183,136,0.15); border:1px solid var(--green-bright); padding:0.9rem 1.2rem; font-size:0.92rem; color:var(--green-bright);">
       ✅ Done! We'll send Rally for Green their way.
@@ -645,18 +678,24 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgdmlld0JveD0iMCAwIDYwNSA2MDUiIHJvbGU9ImltZyIgc3R5bGU9IiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8dGl0bGUgc3R5bGU9ImZpbGw6cmdiKDAsIDAsIDApO3N0cm9rZTpub25lO2NvbG9yOnJnYigwLCAwLCAwKTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTomcXVvdDtBbnRocm9waWMgU2FucyZxdW90OywgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAmcXVvdDtTZWdvZSBVSSZxdW90Oywgc2Fucy1zZXJpZjtmb250LXNpemU6MTZweDtmb250LXdlaWdodDo0MDA7dGV4dC1hbmNob3I6c3RhcnQ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byI+UmFsbHkgZm9yIEdyZWVuIGxvZ288L3RpdGxlPgogIDxkZXNjIHN0eWxlPSJmaWxsOnJnYigwLCAwLCAwKTtzdHJva2U6bm9uZTtjb2xvcjpyZ2IoMCwgMCwgMCk7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtvcGFjaXR5OjE7Zm9udC1mYW1pbHk6JnF1b3Q7QW50aHJvcGljIFNhbnMmcXVvdDssIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNhbnMtc2VyaWY7Zm9udC1zaXplOjE2cHg7Zm9udC13ZWlnaHQ6NDAwO3RleHQtYW5jaG9yOnN0YXJ0O2RvbWluYW50LWJhc2VsaW5lOmF1dG8iPkNpcmN1bGFyIGJhZGdlIHdpdGggdGVubmlzIGJhbGwsIHRocmVlIHJlY3ljbGluZyBhcnJvd3MgaW5zaWRlLCBSYWxseSBmb3IgR3JlZW4gdGV4dCBvdXRzaWRlIG9uIHllbGxvdy1ncmVlbiByaW5nPC9kZXNjPgoKICA8ZGVmcz4KICAgIDxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI1IiBtYXJrZXJIZWlnaHQ9IjUiIG9yaWVudD0iYXV0byI+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMCwwIDEwLDUgMCwxMCIgZmlsbD0iI2Q0ZTE1NyIvPgogICAgPC9tYXJrZXI+CiAgICA8cGF0aCBpZD0idG9wVGV4dCIgZD0iTSA0OCwzMDAgQSAyNTIsMjUyIDAgMSwxIDU1MiwzMDAiLz4KICAgIDxwYXRoIGlkPSJib3RUZXh0IiBkPSJNIDY4LDM0OCBBIDIzNiwyMzYgMCAwLDAgNTMyLDM0OCIvPgogIDwvZGVmcz4KCiAgPCEtLSBzb2Z0IHllbGxvdy1ncmVlbiBvdXRlciByaW5nIC0tPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMwMCIgcj0iMjk1IiBmaWxsPSIjZTlmNWExIiBzdHlsZT0iZmlsbDpyZ2IoMjMzLCAyNDUsIDE2MSk7c3Ryb2tlOm5vbmU7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDoxcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7b3BhY2l0eToxO2ZvbnQtZmFtaWx5OiZxdW90O0FudGhyb3BpYyBTYW5zJnF1b3Q7LCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICZxdW90O1NlZ29lIFVJJnF1b3Q7LCBzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxNnB4O2ZvbnQtd2VpZ2h0OjQwMDt0ZXh0LWFuY2hvcjpzdGFydDtkb21pbmFudC1iYXNlbGluZTphdXRvIi8+CgogIDwhLS0gZGFyayBncmVlbiBiYWRnZSAtLT4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIzMDAiIHI9IjIyMCIgZmlsbD0iIzFhM2EyYSIgc3R5bGU9ImZpbGw6cmdiKDI2LCA1OCwgNDIpO3N0cm9rZTpub25lO2NvbG9yOnJnYigwLCAwLCAwKTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTomcXVvdDtBbnRocm9waWMgU2FucyZxdW90OywgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAmcXVvdDtTZWdvZSBVSSZxdW90Oywgc2Fucy1zZXJpZjtmb250LXNpemU6MTZweDtmb250LXdlaWdodDo0MDA7dGV4dC1hbmNob3I6c3RhcnQ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMwMCIgcj0iMjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGUxNTciIHN0cm9rZS13aWR0aD0iNCIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6cmdiKDIxMiwgMjI1LCA4Nyk7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDo0cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7b3BhY2l0eToxO2ZvbnQtZmFtaWx5OiZxdW90O0FudGhyb3BpYyBTYW5zJnF1b3Q7LCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICZxdW90O1NlZ29lIFVJJnF1b3Q7LCBzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxNnB4O2ZvbnQtd2VpZ2h0OjQwMDt0ZXh0LWFuY2hvcjpzdGFydDtkb21pbmFudC1iYXNlbGluZTphdXRvIi8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzAwIiByPSIyMDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJkNmE0ZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOnJnYig0NSwgMTA2LCA3OSk7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDoxLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtvcGFjaXR5OjE7Zm9udC1mYW1pbHk6JnF1b3Q7QW50aHJvcGljIFNhbnMmcXVvdDssIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNhbnMtc2VyaWY7Zm9udC1zaXplOjE2cHg7Zm9udC13ZWlnaHQ6NDAwO3RleHQtYW5jaG9yOnN0YXJ0O2RvbWluYW50LWJhc2VsaW5lOmF1dG8iLz4KCiAgPCEtLSB0ZW5uaXMgYmFsbCAtLT4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIzMDAiIHI9IjY1IiBmaWxsPSIjYzhkYzNhIiBzdHlsZT0iZmlsbDpyZ2IoMjAwLCAyMjAsIDU4KTtzdHJva2U6bm9uZTtjb2xvcjpyZ2IoMCwgMCwgMCk7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtvcGFjaXR5OjE7Zm9udC1mYW1pbHk6JnF1b3Q7QW50aHJvcGljIFNhbnMmcXVvdDssIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNhbnMtc2VyaWY7Zm9udC1zaXplOjE2cHg7Zm9udC13ZWlnaHQ6NDAwO3RleHQtYW5jaG9yOnN0YXJ0O2RvbWluYW50LWJhc2VsaW5lOmF1dG8iLz4KICA8cGF0aCBkPSJNIDI1MiwyNzQgUSAyNzgsMzAwIDI1MiwzMjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpyZ2IoMjU1LCAyNTUsIDI1NSk7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDo0cHg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTomcXVvdDtBbnRocm9waWMgU2FucyZxdW90OywgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAmcXVvdDtTZWdvZSBVSSZxdW90Oywgc2Fucy1zZXJpZjtmb250LXNpemU6MTZweDtmb250LXdlaWdodDo0MDA7dGV4dC1hbmNob3I6c3RhcnQ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byIvPgogIDxwYXRoIGQ9Ik0gMzQ4LDI3NCBRIDMyMiwzMDAgMzQ4LDMyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOnJnYigyNTUsIDI1NSwgMjU1KTtjb2xvcjpyZ2IoMCwgMCwgMCk7c3Ryb2tlLXdpZHRoOjRweDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7b3BhY2l0eToxO2ZvbnQtZmFtaWx5OiZxdW90O0FudGhyb3BpYyBTYW5zJnF1b3Q7LCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICZxdW90O1NlZ29lIFVJJnF1b3Q7LCBzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxNnB4O2ZvbnQtd2VpZ2h0OjQwMDt0ZXh0LWFuY2hvcjpzdGFydDtkb21pbmFudC1iYXNlbGluZTphdXRvIi8+CgogIDwhLS0gQXJyb3cgMSAtLT4KICA8cGF0aCBkPSJNIDI2MC43LDE5MS45IEEgMTE1LDExNSAwIDAsMSA0MTMuMywyODAuMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDRlMTU3IiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgbWFya2VyLWVuZD0idXJsKCNhaCkiIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOnJnYigyMTIsIDIyNSwgODcpO2NvbG9yOnJnYigwLCAwLCAwKTtzdHJva2Utd2lkdGg6OXB4O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjptaXRlcjtvcGFjaXR5OjE7Zm9udC1mYW1pbHk6JnF1b3Q7QW50aHJvcGljIFNhbnMmcXVvdDssIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNhbnMtc2VyaWY7Zm9udC1zaXplOjE2cHg7Zm9udC13ZWlnaHQ6NDAwO3RleHQtYW5jaG9yOnN0YXJ0O2RvbWluYW50LWJhc2VsaW5lOmF1dG8iLz4KICA8IS0tIEFycm93IDIgLS0+CiAgPHBhdGggZD0iTSA0MTMuMywzMjAuMCBBIDExNSwxMTUgMCAwLDEgMjYwLjcsNDA4LjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q0ZTE1NyIgc3Ryb2tlLXdpZHRoPSI5IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG1hcmtlci1lbmQ9InVybCgjYWgpIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTpyZ2IoMjEyLCAyMjUsIDg3KTtjb2xvcjpyZ2IoMCwgMCwgMCk7c3Ryb2tlLXdpZHRoOjlweDtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46bWl0ZXI7b3BhY2l0eToxO2ZvbnQtZmFtaWx5OiZxdW90O0FudGhyb3BpYyBTYW5zJnF1b3Q7LCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICZxdW90O1NlZ29lIFVJJnF1b3Q7LCBzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxNnB4O2ZvbnQtd2VpZ2h0OjQwMDt0ZXh0LWFuY2hvcjpzdGFydDtkb21pbmFudC1iYXNlbGluZTphdXRvIi8+CiAgPCEtLSBBcnJvdyAzIC0tPgogIDxwYXRoIGQ9Ik0gMjI2LjEsMzg4LjEgQSAxMTUsMTE1IDAgMCwxIDIyNi4xLDIxMS45IiBmaWxsPSJub25lIiBzdHJva2U9IiNkNGUxNTciIHN0cm9rZS13aWR0aD0iOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6cmdiKDIxMiwgMjI1LCA4Nyk7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDo5cHg7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTomcXVvdDtBbnRocm9waWMgU2FucyZxdW90OywgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAmcXVvdDtTZWdvZSBVSSZxdW90Oywgc2Fucy1zZXJpZjtmb250LXNpemU6MTZweDtmb250LXdlaWdodDo0MDA7dGV4dC1hbmNob3I6c3RhcnQ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byIvPgoKICA8IS0tIGRvdCBtYXJrZXJzIC0tPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjgwIiByPSI0IiBmaWxsPSIjZDRlMTU3IiBzdHlsZT0iZmlsbDpyZ2IoMjEyLCAyMjUsIDg3KTtzdHJva2U6bm9uZTtjb2xvcjpyZ2IoMCwgMCwgMCk7c3Ryb2tlLXdpZHRoOjFweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtvcGFjaXR5OjE7Zm9udC1mYW1pbHk6JnF1b3Q7QW50aHJvcGljIFNhbnMmcXVvdDssIC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJnF1b3Q7U2Vnb2UgVUkmcXVvdDssIHNhbnMtc2VyaWY7Zm9udC1zaXplOjE2cHg7Zm9udC13ZWlnaHQ6NDAwO3RleHQtYW5jaG9yOnN0YXJ0O2RvbWluYW50LWJhc2VsaW5lOmF1dG8iLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSI1MjQiIHI9IjQiIGZpbGw9IiM1MmI3ODgiIHN0eWxlPSJmaWxsOnJnYig4MiwgMTgzLCAxMzYpO3N0cm9rZTpub25lO2NvbG9yOnJnYigwLCAwLCAwKTtzdHJva2Utd2lkdGg6MXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTomcXVvdDtBbnRocm9waWMgU2FucyZxdW90OywgLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAmcXVvdDtTZWdvZSBVSSZxdW90Oywgc2Fucy1zZXJpZjtmb250LXNpemU6MTZweDtmb250LXdlaWdodDo0MDA7dGV4dC1hbmNob3I6c3RhcnQ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byIvPgoKICA8IS0tIFJBTExZIEZPUiBHUkVFTiB0ZXh0IC0tPgogIDx0ZXh0IGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzMiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzFhM2EyYSIgc3Ryb2tlPSIjZTlmNWExIiBzdHJva2Utd2lkdGg9IjUiIHBhaW50LW9yZGVyPSJzdHJva2UiIGxldHRlci1zcGFjaW5nPSIxMCIgc3R5bGU9ImZpbGw6cmdiKDI2LCA1OCwgNDIpO3N0cm9rZTpyZ2IoMjMzLCAyNDUsIDE2MSk7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDo1cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7b3BhY2l0eToxO2ZvbnQtZmFtaWx5Okdlb3JnaWEsIHNlcmlmO2ZvbnQtc2l6ZTozMnB4O2ZvbnQtd2VpZ2h0OjcwMDt0ZXh0LWFuY2hvcjpzdGFydDtkb21pbmFudC1iYXNlbGluZTphdXRvIj4KICAgIDx0ZXh0UGF0aCBocmVmPSIjdG9wVGV4dCIgc3RhcnRPZmZzZXQ9IjUwJSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgc3R5bGU9ImZpbGw6cmdiKDI2LCA1OCwgNDIpO3N0cm9rZTpyZ2IoMjMzLCAyNDUsIDE2MSk7Y29sb3I6cmdiKDAsIDAsIDApO3N0cm9rZS13aWR0aDo1cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7b3BhY2l0eToxO2ZvbnQtZmFtaWx5Okdlb3JnaWEsIHNlcmlmO2ZvbnQtc2l6ZTozMnB4O2ZvbnQtd2VpZ2h0OjcwMDt0ZXh0LWFuY2hvcjptaWRkbGU7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byI+UkFMTFkgRk9SIEdSRUVOPC90ZXh0UGF0aD4KICA8L3RleHQ+CgogIDwhLS0gdGFnbGluZSDigJQgYmlnZ2VyIGFuZCBib2xkZXIgLS0+CiAgPHRleHQgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMWEzYTJhIiBzdHJva2U9IiNlOWY1YTEiIHN0cm9rZS13aWR0aD0iNCIgcGFpbnQtb3JkZXI9InN0cm9rZSIgbGV0dGVyLXNwYWNpbmc9IjUiIHN0eWxlPSJmaWxsOnJnYigyNiwgNTgsIDQyKTtzdHJva2U6cmdiKDIzMywgMjQ1LCAxNjEpO2NvbG9yOnJnYigwLCAwLCAwKTtzdHJva2Utd2lkdGg6NHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTpHZW9yZ2lhLCBzZXJpZjtmb250LXNpemU6MjBweDtmb250LXdlaWdodDo3MDA7dGV4dC1hbmNob3I6c3RhcnQ7ZG9taW5hbnQtYmFzZWxpbmU6YXV0byI+CiAgICA8dGV4dFBhdGggaHJlZj0iI2JvdFRleHQiIHN0YXJ0T2Zmc2V0PSI1MCUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHN0eWxlPSJmaWxsOnJnYigyNiwgNTgsIDQyKTtzdHJva2U6cmdiKDIzMywgMjQ1LCAxNjEpO2NvbG9yOnJnYigwLCAwLCAwKTtzdHJva2Utd2lkdGg6NHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO29wYWNpdHk6MTtmb250LWZhbWlseTpHZW9yZ2lhLCBzZXJpZjtmb250LXNpemU6MjBweDtmb250LXdlaWdodDo3MDA7dGV4dC1hbmNob3I6bWlkZGxlO2RvbWluYW50LWJhc2VsaW5lOmF1dG8iPlJFQ1lDTEUgwrcgUkVVU0UgwrcgUkFMTFk8L3RleHRQYXRoPgogIDwvdGV4dD4KCjwvc3ZnPg==" alt="Rally for Green" style="height:60px;width:60px;border-radius:50%;">
-    <p>A youth-led community initiative 🌱</p>
-    <div class="footer-partners">
+  <!-- Top row: Rally for Green (left) | A youth-led (center) | Partners (right) -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; align-items:center; gap:1rem;">
+    <div class="footer-logo" style="text-align:left;">Rally <span style="color:var(--green-bright);">for</span> Green</div>
+    <p style="text-align:center; font-size:0.85rem; color:rgba(245,240,232,0.45); margin:0;" id="footer-tagline">A youth-led community initiative 🌱</p>
+    <div class="footer-partners" style="justify-content:flex-end;">
       <span style="font-size:0.8rem;color:rgba(245,240,232,0.4);text-transform:uppercase;letter-spacing:0.1em;">Partners:</span>
       <a href="https://www.recycleballs.org" target="_blank">RecycleBalls.org</a>
       <a href="https://www.ballback.org" target="_blank">BallBack.org</a>
-      <a href="https://gofund.me/87a9d12f6" target="_blank" style="color: var(--yellow-ball);">💚 Donate</a>
+      <a href="https://gofund.me/87a9d12f6" target="_blank" style="color:var(--yellow-ball);">💚 Donate</a>
     </div>
   </div>
   <hr class="footer-divider">
-  <p style="text-align:center; font-size:0.8rem; color:rgba(245,240,232,0.35);">© 2025 Rally for Green. Making every ball count.</p>
+  <!-- Bottom row: copyright aligned under center column -->
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr;">
+    <div></div>
+    <p style="text-align:center; font-size:0.8rem; color:rgba(245,240,232,0.35); margin:0;">© 2025 Rally for Green. Making every ball count.</p>
+    <div></div>
+  </div>
 </footer>
 
 <script>
@@ -686,39 +725,71 @@
   }, { threshold: 0.3 });
   observer.observe(document.getElementById('counter'));
 
-  // Referral sender
-  function sendReferral() {
+  // Referral sender via Web3Forms
+  async function sendReferral() {
     const email = document.getElementById('referralEmail').value.trim();
     if (!email || !email.includes('@')) {
       alert('Please enter a valid email address.');
       return;
     }
-    const subject = encodeURIComponent('Check out Rally for Green — Tennis Ball Recycling Program');
-    const body = encodeURIComponent(
-      'Hi,\n\nI wanted to share a great initiative with you — Rally for Green, a youth-led tennis ball recycling program based in the Dallas–Fort Worth area with a mission to expand across Texas.\n\nThey collect used tennis balls at schools and country clubs, keep them out of landfills, and recycle them into court surfaces or donate them to animal shelters.\n\nThey are looking to partner with schools and clubs like yours — at no cost to you. Learn more and get in touch at the website below.\n\nRally for Green: https://rallyforgreen.com\n\nHope you find this as inspiring as I do!'
-    );
-    window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
-    document.getElementById('referralSuccess').style.display = 'block';
-    document.getElementById('referralEmail').value = '';
+    const btn = document.getElementById('referralBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    const formData = new FormData();
+    formData.append('access_key', 'f5e07b0d-dc4d-4772-8679-0e29a3091e1f');
+    formData.append('subject', 'Rally for Green — Referral: Someone wants to share this with a Coach or Director');
+    formData.append('from_name', 'Rally for Green Referral');
+    formData.append('message', 'A visitor to the Rally for Green website wants to refer the following contact:\n\nReferral Email: ' + email + '\n\nPlease reach out to them about partnering with Rally for Green.');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      if (data.success) {
+        document.getElementById('referralSuccess').style.display = 'block';
+        document.getElementById('referralEmail').value = '';
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch(err) {
+      alert('Something went wrong. Please try again.');
+    }
+    btn.textContent = 'Send the Site →';
+    btn.disabled = false;
   }
 
-  // Contact form — opens mailto
-  function submitForm() {
-    const name = document.getElementById('fname').value.trim();
-    const email = document.getElementById('femail').value.trim();
-    const message = document.getElementById('fmessage').value.trim();
-    if (!name || !email || !message) {
-      alert('Please fill in all fields before sending.');
-      return;
-    }
-    const subject = encodeURIComponent('Rally for Green — Message from ' + name);
-    const org = document.getElementById('forg') ? document.getElementById('forg').value.trim() : '';
-    const body = encodeURIComponent('Name: ' + name + '\nOrganization: ' + org + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-    window.location.href = 'mailto:blpanther@outlook.com?subject=' + subject + '&body=' + body;
-    document.getElementById('formSuccess').style.display = 'block';
-    document.getElementById('fname').value = '';
-    document.getElementById('femail').value = '';
-    document.getElementById('fmessage').value = '';
+  // Web3Forms contact form handler
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      const formData = new FormData(contactForm);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('formSuccess').style.display = 'block';
+          contactForm.reset();
+          btn.textContent = 'Send Message →';
+          btn.disabled = false;
+        } else {
+          alert('Something went wrong. Please try again or email us directly at blpanther@outlook.com');
+          btn.textContent = 'Send Message →';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        alert('Something went wrong. Please try again or email us directly at blpanther@outlook.com');
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+      }
+    });
   }
 </script>
 </body>
