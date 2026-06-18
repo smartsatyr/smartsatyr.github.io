@@ -221,6 +221,7 @@
   .footer-divider { border: none; border-top: 1px solid rgba(82,183,136,0.15); margin: 1rem 0; }
 
   @media (max-width: 768px) {
+    #notify > div > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
     #about > div > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
     .gallery-grid { grid-template-columns: 1fr 1fr; }
     .gallery-item.large { grid-column: span 2; }
@@ -248,6 +249,7 @@
     <li><a href="#how">How It Works</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#bins">Find a Bin</a></li>
+    <li><a href="#notify">Notify Pickup</a></li>
     <li><a href="#contact">Join the Rally</a></li>
     <li><a href="https://gofund.me/87a9d12f6" target="_blank" class="nav-donate">💚 Donate</a></li>
   </ul>
@@ -506,6 +508,7 @@
       <div class="pin-badge">Argyle Middle School</div>
       <div class="pin-badge">Byron Nelson HS</div>
       <div class="pin-badge">Carroll HS</div>
+      <div class="pin-badge">Grapevine HS</div>
     </div>
     <div class="location-cards">
       <div class="loc-card">
@@ -536,7 +539,13 @@
         <div class="loc-icon">🎾</div>
         <div class="loc-name">Carroll High School</div>
         <div class="loc-addr">800 N White Chapel Blvd, Southlake TX</div>
-        <a href="https://maps.google.com/?cid=16958988759889703360" target="_blank" class="loc-link">Get Directions →</a>
+        <a href="https://maps.google.com/?q=Carroll+High+School,+800+N+White+Chapel+Blvd,+Southlake,+TX+76092" target="_blank" class="loc-link">Get Directions →</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon">🎾</div>
+        <div class="loc-name">Grapevine High School</div>
+        <div class="loc-addr">3223 Mustang Dr, Grapevine TX 76051</div>
+        <a href="https://maps.google.com/?q=3223+Mustang+Dr,+Grapevine,+TX+76051" target="_blank" class="loc-link">Get Directions →</a>
       </div>
     </div>
     <div class="map-container">
@@ -545,7 +554,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        var map = L.map('binMap', { zoomControl: true, scrollWheelZoom: false }).setView([33.03, -97.13], 11);
+        var map = L.map('binMap', { zoomControl: true, scrollWheelZoom: false }).setView([33.01, -97.12], 10);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
@@ -563,7 +572,8 @@
           { name: "Marcus High School", addr: "5707 Morriss Rd, Flower Mound TX", lat: 33.0644, lng: -97.0626 },
           { name: "Argyle Middle School", addr: "191 US-377, Argyle TX", lat: 33.1070, lng: -97.1854 },
           { name: "Byron Nelson High School", addr: "2775 Bobcat Blvd, Trophy Club TX", lat: 33.0189, lng: -97.2028 },
-          { name: "Carroll High School", addr: "800 N White Chapel Blvd, Southlake TX", lat: 32.9515, lng: -97.1532 }
+          { name: "Carroll High School", addr: "800 N White Chapel Blvd, Southlake TX", lat: 32.9515, lng: -97.1532 },
+          { name: "Grapevine High School", addr: "3223 Mustang Dr, Grapevine TX 76051", lat: 32.9343, lng: -97.0779 }
         ];
 
         locations.forEach(function(loc) {
@@ -578,6 +588,89 @@
     <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-top:2.5rem;">
       <a href="#contact" class="btn-primary">Request a Bin Location</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- NOTIFY -->
+<div style="background:linear-gradient(135deg,#0f2318,#1a3a2a); border-top:3px solid var(--yellow-ball); border-bottom:3px solid var(--yellow-ball); padding:5rem 3rem;" id="notify">
+  <div style="max-width:800px; margin:0 auto;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-bright); margin-bottom:0.75rem;">For High Schools &amp; Country Clubs</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,5vw,4rem); line-height:1; margin-bottom:1rem;">Balls Ready for <span style="color:var(--yellow-ball);">Pickup?</span></h2>
+    <p style="font-size:1.05rem; line-height:1.75; color:rgba(245,240,232,0.85); margin-bottom:2.5rem; max-width:600px;">If you're a partnered high school or country club with a collection bin, let us know when your bin is full and ready to be picked up. Just fill in your details below and hit notify — we'll be in touch to schedule a pickup.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;">
+
+      <!-- Left: What to expect -->
+      <div>
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--yellow-ball); margin-bottom:1rem;">What happens next?</h3>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">You hit <strong>Notify for Pickup</strong> with your school or club name and contact info</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">Tejas receives your notification and reaches out to schedule a convenient pickup time</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
+            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">Balls are collected, sorted, and shipped to our recycling partners — keeping them out of landfills</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Notify Form -->
+      <div>
+        <form id="notifyForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f5e07b0d-dc4d-4772-8679-0e29a3091e1f">
+          <input type="hidden" name="subject" value="🎾 Rally for Green — PICKUP REQUEST">
+          <input type="hidden" name="redirect" value="false">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">School or Club Name *</label>
+              <input type="text" name="organization" placeholder="e.g. Carroll High School / Stonebriar Country Club"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Your Name *</label>
+              <input type="text" name="name" placeholder="e.g. Coach Johnson"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Email Address *</label>
+              <input type="email" name="email" placeholder="you@school.edu"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Approx. Number of Balls</label>
+              <input type="text" name="ball_count" placeholder="e.g. ~50 balls, bin is full"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Best Days / Times for Pickup</label>
+              <input type="text" name="pickup_time" placeholder="e.g. Weekdays after 3pm, anytime Saturday"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <button type="submit" id="notifyBtn"
+              style="background:var(--yellow-hot); color:var(--green-deep); padding:1rem 2.5rem; font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border:none; cursor:pointer; clip-path:polygon(0 0,100% 0,95% 100%,0 100%); transition:background 0.2s; margin-top:0.5rem; width:100%;">
+              🎾 Notify for Pickup
+            </button>
+            <div id="notifySuccess" style="display:none; background:rgba(82,183,136,0.15); border:1px solid var(--green-bright); padding:1rem 1.2rem; font-size:0.95rem; color:var(--green-bright);">
+              ✅ Pickup request sent! Tejas will reach out soon to schedule a time.
+            </div>
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
 </div>
@@ -724,6 +817,32 @@
     entries.forEach(e => { if (e.isIntersecting) { animateCounter(); observer.disconnect(); } });
   }, { threshold: 0.3 });
   observer.observe(document.getElementById('counter'));
+
+  // Notify for Pickup form handler
+  const notifyForm = document.getElementById('notifyForm');
+  if (notifyForm) {
+    notifyForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('notifyBtn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      const formData = new FormData(notifyForm);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body:formData });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('notifySuccess').style.display = 'block';
+          notifyForm.reset();
+        } else {
+          alert('Something went wrong. Please email blpanther@outlook.com directly.');
+        }
+      } catch(err) {
+        alert('Something went wrong. Please email blpanther@outlook.com directly.');
+      }
+      btn.textContent = '🎾 Notify for Pickup';
+      btn.disabled = false;
+    });
+  }
 
   // Referral sender via Web3Forms
   async function sendReferral() {
