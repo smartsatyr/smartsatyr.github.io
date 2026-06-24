@@ -249,8 +249,8 @@
     <li><a href="#how">How It Works</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#bins">Find a Bin</a></li>
-    <li><a href="#notify">Notify Pickup</a></li>
     <li><a href="#contact">Join the Rally</a></li>
+    <li><a href="#notify">Notify Pickup</a></li>
     <li><a href="https://gofund.me/87a9d12f6" target="_blank" class="nav-donate">💚 Donate</a></li>
   </ul>
 </nav>
@@ -277,7 +277,6 @@
     </p>
     <div class="hero-cta">
       <a href="#bins" class="btn-primary">Find a Drop-Off Bin</a>
-      <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate">💚 Donate</a>
       <a href="#how" class="btn-outline">Learn More</a>
     </div>
   </div>
@@ -502,14 +501,6 @@
       <span style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:var(--yellow-ball);">🌟 We're just getting started in DFW — but our goal is all of Texas.</span>
       <p style="font-size:0.9rem; color:rgba(245,240,232,0.65); margin-top:0.4rem; margin-bottom:0;">If you're outside the DFW area, stay tuned — or reach out to help us expand to your city.</p>
     </div>
-    <div class="location-pins">
-      <div class="pin-badge">Flower Mound HS</div>
-      <div class="pin-badge">Marcus HS</div>
-      <div class="pin-badge">Argyle Middle School</div>
-      <div class="pin-badge">Byron Nelson HS</div>
-      <div class="pin-badge">Carroll HS</div>
-      <div class="pin-badge">Grapevine HS</div>
-    </div>
     <div class="location-cards">
       <div class="loc-card">
         <div class="loc-icon">🎾</div>
@@ -593,88 +584,6 @@
 </div>
 
 
-<!-- NOTIFY -->
-<div style="background:linear-gradient(135deg,#0f2318,#1a3a2a); border-top:3px solid var(--yellow-ball); border-bottom:3px solid var(--yellow-ball); padding:5rem 3rem;" id="notify">
-  <div style="max-width:800px; margin:0 auto;">
-    <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-bright); margin-bottom:0.75rem;">For High Schools &amp; Country Clubs</div>
-    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,5vw,4rem); line-height:1; margin-bottom:1rem;">Balls Ready for <span style="color:var(--yellow-ball);">Pickup?</span></h2>
-    <p style="font-size:1.05rem; line-height:1.75; color:rgba(245,240,232,0.85); margin-bottom:2.5rem; max-width:600px;">If you're a partnered high school or country club with a collection bin, let us know when your bin is full and ready to be picked up. Just fill in your details below and hit notify — we'll be in touch to schedule a pickup.</p>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;">
-
-      <!-- Left: What to expect -->
-      <div>
-        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--yellow-ball); margin-bottom:1rem;">What happens next?</h3>
-        <div style="display:flex; flex-direction:column; gap:1rem;">
-          <div style="display:flex; gap:1rem; align-items:flex-start;">
-            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
-            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">You hit <strong>Notify for Pickup</strong> with your school or club name and contact info</p>
-          </div>
-          <div style="display:flex; gap:1rem; align-items:flex-start;">
-            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
-            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">Tejas receives your notification and reaches out to schedule a convenient pickup time</p>
-          </div>
-          <div style="display:flex; gap:1rem; align-items:flex-start;">
-            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
-            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">Balls are collected, sorted, and shipped to our recycling partners — keeping them out of landfills</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Notify Form -->
-      <div>
-        <form id="notifyForm" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="f5e07b0d-dc4d-4772-8679-0e29a3091e1f">
-          <input type="hidden" name="subject" value="🎾 Rally for Green — PICKUP REQUEST">
-          <input type="hidden" name="redirect" value="false">
-          <input type="checkbox" name="botcheck" style="display:none;">
-
-          <div style="display:flex; flex-direction:column; gap:1rem;">
-            <div class="form-field">
-              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">School or Club Name *</label>
-              <input type="text" name="organization" placeholder="e.g. Carroll High School / Stonebriar Country Club"
-                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
-                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
-            </div>
-            <div class="form-field">
-              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Your Name *</label>
-              <input type="text" name="name" placeholder="e.g. Coach Johnson"
-                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
-                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
-            </div>
-            <div class="form-field">
-              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Email Address *</label>
-              <input type="email" name="email" placeholder="you@school.edu"
-                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
-                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
-            </div>
-            <div class="form-field">
-              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Approx. Number of Balls</label>
-              <input type="text" name="ball_count" placeholder="e.g. ~50 balls, bin is full"
-                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
-                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
-            </div>
-            <div class="form-field">
-              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Best Days / Times for Pickup</label>
-              <input type="text" name="pickup_time" placeholder="e.g. Weekdays after 3pm, anytime Saturday"
-                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
-                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
-            </div>
-            <button type="submit" id="notifyBtn"
-              style="background:var(--yellow-hot); color:var(--green-deep); padding:1rem 2.5rem; font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border:none; cursor:pointer; clip-path:polygon(0 0,100% 0,95% 100%,0 100%); transition:background 0.2s; margin-top:0.5rem; width:100%;">
-              🎾 Notify for Pickup
-            </button>
-            <div id="notifySuccess" style="display:none; background:rgba(82,183,136,0.15); border:1px solid var(--green-bright); padding:1rem 1.2rem; font-size:0.95rem; color:var(--green-bright);">
-              ✅ Pickup request sent! Tejas will reach out soon to schedule a time.
-            </div>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
-
 <!-- CONTACT -->
 <div class="contact-section" id="contact" style="max-width:1000px; margin:0 auto;">
   <div class="section-tag">Partner With Us</div>
@@ -729,13 +638,212 @@
           <label for="femail">Email Address</label>
           <input type="email" id="femail" name="email" placeholder="you@yourschool.edu" required />
         </div>
+
+        <!-- Region Selector -->
+        <div class="form-field">
+          <label>Where are you located in Texas?</label>
+          <select id="contactRegion" name="region" onchange="handleContactRegion()" required
+            style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.35); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none; cursor:pointer; appearance:none;"
+            onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.35)'">
+            <option value="" style="background:#1a3a2a;">— Select your region —</option>
+            <optgroup label="── North Texas" style="background:#1a3a2a;"><option value="dfw" style="background:#1a3a2a;">Dallas–Fort Worth (DFW)</option><option value="far" style="background:#1a3a2a;">Denton</option><option value="far" style="background:#1a3a2a;">Sherman / Denison</option><option value="far" style="background:#1a3a2a;">Wichita Falls</option><option value="far" style="background:#1a3a2a;">Texarkana</option><option value="far" style="background:#1a3a2a;">Gainesville</option></optgroup>
+            <optgroup label="── East Texas" style="background:#1a3a2a;"><option value="far" style="background:#1a3a2a;">Tyler</option><option value="far" style="background:#1a3a2a;">Longview</option><option value="far" style="background:#1a3a2a;">Lufkin</option><option value="far" style="background:#1a3a2a;">Nacogdoches</option><option value="far" style="background:#1a3a2a;">Marshall</option></optgroup>
+            <optgroup label="── Central Texas" style="background:#1a3a2a;"><option value="far" style="background:#1a3a2a;">Austin</option><option value="far" style="background:#1a3a2a;">Waco</option><option value="far" style="background:#1a3a2a;">Killeen / Temple</option><option value="far" style="background:#1a3a2a;">Abilene</option><option value="far" style="background:#1a3a2a;">San Angelo</option></optgroup>
+            <optgroup label="── South Texas" style="background:#1a3a2a;"><option value="far" style="background:#1a3a2a;">San Antonio</option><option value="far" style="background:#1a3a2a;">Corpus Christi</option><option value="far" style="background:#1a3a2a;">Laredo</option><option value="far" style="background:#1a3a2a;">McAllen / Rio Grande Valley</option><option value="far" style="background:#1a3a2a;">Brownsville</option><option value="far" style="background:#1a3a2a;">Victoria</option></optgroup>
+            <optgroup label="── Gulf Coast / Southeast Texas" style="background:#1a3a2a;"><option value="far" style="background:#1a3a2a;">Houston</option><option value="far" style="background:#1a3a2a;">Galveston</option><option value="far" style="background:#1a3a2a;">Beaumont / Port Arthur</option><option value="far" style="background:#1a3a2a;">Lake Charles area</option></optgroup>
+            <optgroup label="── West Texas" style="background:#1a3a2a;"><option value="far" style="background:#1a3a2a;">El Paso</option><option value="far" style="background:#1a3a2a;">Midland / Odessa</option><option value="far" style="background:#1a3a2a;">Lubbock</option><option value="far" style="background:#1a3a2a;">Amarillo</option><option value="far" style="background:#1a3a2a;">Big Spring</option><option value="far" style="background:#1a3a2a;">Big Bend / Alpine</option></optgroup>
+            <optgroup label="── Other" style="background:#1a3a2a;"><option value="far" style="background:#1a3a2a;">Other / Not Listed</option></optgroup>
+          </select>
+        </div>
+
+        <!-- Do you already have a bin? -->
+        <div class="form-field" id="binQuestionWrap" style="display:none;">
+          <label>Would you like a Rally for Green collection bin?</label>
+          <div style="display:flex; gap:1rem; margin-top:0.5rem;">
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.95rem; color:var(--cream); text-transform:none; letter-spacing:0;">
+              <input type="radio" name="has_bin" value="yes" onchange="handleBinAnswer('yes')" style="accent-color:var(--yellow-ball); width:16px; height:16px;"> Yes, I'd like one
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.95rem; color:var(--cream); text-transform:none; letter-spacing:0;">
+              <input type="radio" name="has_bin" value="no" onchange="handleBinAnswer('no')" style="accent-color:var(--yellow-ball); width:16px; height:16px;"> No, just reaching out
+            </label>
+          </div>
+        </div>
+
+        <!-- Shipping address — shown if outside DFW AND no bin -->
+        <div class="form-field" id="shippingWrap" style="display:none;">
+          <label for="fshipping">Shipping Address for Bin</label>
+          <textarea id="fshipping" name="shipping_address" rows="3"
+            placeholder="Street address, City, State, ZIP"
+            style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.35); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none; resize:vertical;"
+            onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.35)'"></textarea>
+          <p style="font-size:0.78rem; color:rgba(245,240,232,0.4); margin-top:0.4rem;">We'll ship a collection bin to your location so you can start collecting right away.</p>
+        </div>
+
         <div class="form-field">
           <label for="fmessage">How Can We Help?</label>
           <textarea id="fmessage" name="message" placeholder="Tell us about your interest — hosting a bin, partnering with us, or anything else..." required></textarea>
         </div>
-        <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
+        <button type="button" class="form-submit" id="submitBtn" onclick="submitContactForm()">Send Message →</button>
         <div class="form-success" id="formSuccess">✅ Thanks! Your message has been sent. We'll be in touch soon.</div>
       </form>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFY -->
+<div style="background:linear-gradient(135deg,#0f2318,#1a3a2a); border-top:3px solid var(--yellow-ball); border-bottom:3px solid var(--yellow-ball); padding:5rem 3rem;" id="notify">
+  <div style="max-width:800px; margin:0 auto;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--green-bright); margin-bottom:0.75rem;">For High Schools &amp; Country Clubs</div>
+    <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,5vw,4rem); line-height:1; margin-bottom:1rem;">Balls Ready for <span style="color:var(--yellow-ball);">Pickup?</span></h2>
+    <p style="font-size:1.05rem; line-height:1.75; color:rgba(245,240,232,0.85); margin-bottom:2.5rem; max-width:600px;">If you're a partnered high school or country club with a collection bin, let us know when your bin is full and ready to be picked up. Just fill in your details below and hit notify — we'll be in touch to schedule a pickup.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start;">
+
+      <!-- Left: What to expect -->
+      <div>
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.3rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--yellow-ball); margin-bottom:1rem;">What happens next?</h3>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">You hit <strong>Notify for Pickup</strong> with your school or club name and contact info</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">Tejas receives your notification and reaches out to schedule a convenient pickup time</p>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div style="background:var(--yellow-ball); color:var(--green-deep); font-family:'Bebas Neue',sans-serif; font-size:1.2rem; width:32px; height:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
+            <p style="font-size:0.92rem; color:rgba(245,240,232,0.8); line-height:1.6;">Balls are collected, sorted, and shipped to our recycling partners — keeping them out of landfills</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Notify Form -->
+      <div>
+        <form id="notifyForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f5e07b0d-dc4d-4772-8679-0e29a3091e1f">
+          <input type="hidden" name="subject" value="🎾 Rally for Green — PICKUP REQUEST">
+          <input type="hidden" name="redirect" value="false">
+          <input type="checkbox" name="botcheck" style="display:none;">
+
+          <!-- Region Selector -->
+          <div style="margin-bottom:1rem;">
+            <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Where are you located in Texas? *</label>
+            <select id="regionSelect" onchange="handleRegionChange()" name="region"
+              style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none; cursor:pointer; appearance:none;"
+              onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'">
+              <option value="" style="background:#1a3a2a;">— Select your region —</option>
+              <optgroup label="── North Texas" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="dfw" style="background:#1a3a2a;">Dallas–Fort Worth (DFW)</option>
+                <option value="far" style="background:#1a3a2a;">Denton</option>
+                <option value="far" style="background:#1a3a2a;">Sherman / Denison</option>
+                <option value="far" style="background:#1a3a2a;">Wichita Falls</option>
+                <option value="far" style="background:#1a3a2a;">Texarkana</option>
+                <option value="far" style="background:#1a3a2a;">Gainesville</option>
+              </optgroup>
+              <optgroup label="── East Texas" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="far" style="background:#1a3a2a;">Tyler</option>
+                <option value="far" style="background:#1a3a2a;">Longview</option>
+                <option value="far" style="background:#1a3a2a;">Lufkin</option>
+                <option value="far" style="background:#1a3a2a;">Nacogdoches</option>
+                <option value="far" style="background:#1a3a2a;">Marshall</option>
+              </optgroup>
+              <optgroup label="── Central Texas" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="far" style="background:#1a3a2a;">Austin</option>
+                <option value="far" style="background:#1a3a2a;">Waco</option>
+                <option value="far" style="background:#1a3a2a;">Killeen / Temple</option>
+                <option value="far" style="background:#1a3a2a;">Abilene</option>
+                <option value="far" style="background:#1a3a2a;">San Angelo</option>
+              </optgroup>
+              <optgroup label="── South Texas" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="far" style="background:#1a3a2a;">San Antonio</option>
+                <option value="far" style="background:#1a3a2a;">Corpus Christi</option>
+                <option value="far" style="background:#1a3a2a;">Laredo</option>
+                <option value="far" style="background:#1a3a2a;">McAllen / Rio Grande Valley</option>
+                <option value="far" style="background:#1a3a2a;">Brownsville</option>
+                <option value="far" style="background:#1a3a2a;">Victoria</option>
+              </optgroup>
+              <optgroup label="── Gulf Coast / Southeast Texas" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="far" style="background:#1a3a2a;">Houston</option>
+                <option value="far" style="background:#1a3a2a;">Galveston</option>
+                <option value="far" style="background:#1a3a2a;">Beaumont / Port Arthur</option>
+                <option value="far" style="background:#1a3a2a;">Lake Charles area</option>
+              </optgroup>
+              <optgroup label="── West Texas" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="far" style="background:#1a3a2a;">El Paso</option>
+                <option value="far" style="background:#1a3a2a;">Midland / Odessa</option>
+                <option value="far" style="background:#1a3a2a;">Lubbock</option>
+                <option value="far" style="background:#1a3a2a;">Amarillo</option>
+                <option value="far" style="background:#1a3a2a;">Big Spring</option>
+                <option value="far" style="background:#1a3a2a;">Big Bend / Alpine</option>
+              </optgroup>
+              <optgroup label="── Other" style="background:#1a3a2a; color:var(--green-bright);">
+                <option value="far" style="background:#1a3a2a;">Other / Not Listed</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Out-of-area message -->
+          <div id="outOfAreaMsg" style="display:none; background:rgba(212,225,87,0.08); border:1px solid rgba(212,225,87,0.35); padding:2rem; margin-bottom:1rem; text-align:center;">
+            <div style="font-size:2rem; margin-bottom:0.75rem;">🎾💚</div>
+            <h4 style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--yellow-ball); letter-spacing:0.05em; margin-bottom:0.75rem;">Thank You for Being Part of This!</h4>
+            <p style="font-size:0.95rem; color:rgba(245,240,232,0.85); line-height:1.8; margin-bottom:0.75rem;">We truly appreciate your commitment to keeping tennis balls out of landfills. Unfortunately, your location is too far for us to travel to for a pickup at this time — Rally for Green currently operates within the Dallas–Fort Worth area.</p>
+            <p style="font-size:0.95rem; color:rgba(245,240,232,0.85); line-height:1.8; margin-bottom:1.25rem;">But don't let that stop you! Our partner <strong style="color:var(--green-bright);">BallBack.org</strong> makes it easy — head over to their website and get a prepaid shipping label to mail your balls directly to their recycling facility. It's simple, free, and makes a real difference. 📦♻️</p>
+            <a href="https://www.ballback.org" target="_blank"
+              style="display:inline-block; background:var(--yellow-hot); color:var(--green-deep); padding:0.9rem 2.2rem; font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:background 0.2s; margin-bottom:0.75rem;">
+              Get a Free Shipping Label at BallBack.org →
+            </a>
+            <p style="font-size:0.8rem; color:rgba(245,240,232,0.4); margin-top:0.5rem; margin-bottom:0;">As Rally for Green expands across Texas, we hope to serve your area soon. Stay tuned! 🌱</p>
+          </div>
+
+          <!-- DFW confirmation -->
+          <div id="dfwMsg" style="display:none; background:rgba(82,183,136,0.1); border:1px solid rgba(82,183,136,0.3); padding:1rem 1.2rem; margin-bottom:0.5rem;">
+            <p style="font-size:0.92rem; color:var(--green-bright); margin:0;">✅ Great — you're in our service area! Fill out the form below and we'll schedule your pickup.</p>
+          </div>
+
+          <div id="notifyFormFields" style="display:flex; flex-direction:column; gap:1rem;">
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">School or Club Name *</label>
+              <input type="text" name="organization" placeholder="e.g. Carroll High School / Stonebriar Country Club"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Your Name *</label>
+              <input type="text" name="name" placeholder="e.g. Coach Johnson"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Email Address *</label>
+              <input type="email" name="email" placeholder="you@school.edu"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;" required
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Approx. Number of Balls</label>
+              <input type="text" name="ball_count" placeholder="e.g. ~50 balls, bin is full"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <div class="form-field">
+              <label style="font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-bright); display:block; margin-bottom:0.4rem;">Best Days / Times for Pickup</label>
+              <input type="text" name="pickup_time" placeholder="e.g. Weekdays after 3pm, anytime Saturday"
+                style="width:100%; background:rgba(45,106,79,0.15); border:1px solid rgba(82,183,136,0.4); color:var(--cream); padding:0.85rem 1rem; font-family:'Barlow',sans-serif; font-size:1rem; outline:none;"
+                onfocus="this.style.borderColor='var(--yellow-ball)'" onblur="this.style.borderColor='rgba(82,183,136,0.4)'"/>
+            </div>
+            <button type="submit" id="notifyBtn"
+              style="background:var(--yellow-hot); color:var(--green-deep); padding:1rem 2.5rem; font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border:none; cursor:pointer; clip-path:polygon(0 0,100% 0,95% 100%,0 100%); transition:background 0.2s; margin-top:0.5rem; width:100%;">
+              🎾 Notify for Pickup
+            </button>
+          </div><!-- end notifyFormFields -->
+            <div id="notifySuccess" style="display:none; background:rgba(82,183,136,0.15); border:1px solid var(--green-bright); padding:1rem 1.2rem; font-size:0.95rem; color:var(--green-bright);">
+              ✅ Pickup request sent! Tejas will reach out soon to schedule a time.
+            </div>
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
 </div>
@@ -745,11 +853,6 @@
   <div class="section-tag" style="display:block; text-align:center">Get Involved</div>
   <h2 class="section-title" style="font-size: clamp(3rem, 6vw, 5rem);">Join the <span>Rally</span></h2>
   <p>Whether you're a player, a club, a school, or just someone who cares — there's a place for you in this movement.</p>
-  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:3rem;">
-    <a href="https://gofund.me/87a9d12f6" target="_blank" class="btn-donate" style="font-size:1.1rem;">💚 Donate</a>
-    <a href="https://www.recycleballs.org" target="_blank" class="btn-outline">RecycleBalls.org</a>
-    <a href="https://www.ballback.org" target="_blank" class="btn-outline">BallBack.org</a>
-  </div>
 
   <!-- REFERRAL BOX -->
   <div style="margin-top:0.5rem; max-width:600px; margin-left:auto; margin-right:auto; background:rgba(45,106,79,0.2); border:1px solid rgba(212,225,87,0.3); padding:2.5rem; position:relative; z-index:1;">
@@ -818,6 +921,68 @@
   }, { threshold: 0.3 });
   observer.observe(document.getElementById('counter'));
 
+  // Contact form region + bin handlers
+  var contactIsFar = false;
+  var contactHasBin = null;
+
+  function handleContactRegion() {
+    const val = document.getElementById('contactRegion').value;
+    const binWrap = document.getElementById('binQuestionWrap');
+    const shippingWrap = document.getElementById('shippingWrap');
+    contactIsFar = (val === 'far');
+    // Always show bin question once region selected
+    if (val !== '') {
+      binWrap.style.display = 'block';
+    } else {
+      binWrap.style.display = 'none';
+      shippingWrap.style.display = 'none';
+    }
+    // Re-evaluate shipping
+    updateShipping();
+  }
+
+  function handleBinAnswer(answer) {
+    contactHasBin = answer;
+    updateShipping();
+  }
+
+  function updateShipping() {
+    const shippingWrap = document.getElementById('shippingWrap');
+    // Show shipping only if outside DFW AND they want a bin
+    if (contactIsFar && contactHasBin === 'yes') {
+      shippingWrap.style.display = 'block';
+    } else {
+      shippingWrap.style.display = 'none';
+    }
+  }
+
+  // Region selector handler
+  function handleRegionChange() {
+    const select = document.getElementById('regionSelect');
+    const val = select.value;
+    const outMsg = document.getElementById('outOfAreaMsg');
+    const dfwMsg = document.getElementById('dfwMsg');
+    const fields = document.getElementById('notifyFormFields');
+    const btn = document.getElementById('notifyBtn');
+
+    if (val === 'far') {
+      outMsg.style.display = 'block';
+      dfwMsg.style.display = 'none';
+      fields.style.display = 'none';
+      if (btn) btn.style.display = 'none';
+    } else if (val === 'dfw') {
+      outMsg.style.display = 'none';
+      dfwMsg.style.display = 'block';
+      fields.style.display = 'flex';
+      if (btn) btn.style.display = 'block';
+    } else {
+      outMsg.style.display = 'none';
+      dfwMsg.style.display = 'none';
+      fields.style.display = 'flex';
+      if (btn) btn.style.display = 'block';
+    }
+  }
+
   // Notify for Pickup form handler
   const notifyForm = document.getElementById('notifyForm');
   if (notifyForm) {
@@ -879,10 +1044,60 @@
   }
 
   // Web3Forms contact form handler
+  async function submitContactForm() {
+    // Validate region selection
+    const region = document.getElementById('contactRegion').value;
+    if (!region) {
+      const select = document.getElementById('contactRegion');
+      select.style.borderColor = '#e74c3c';
+      select.focus();
+      alert('Please select your location in Texas before submitting.');
+      return;
+    }
+    // Validate required fields
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const message = document.getElementById('fmessage').value.trim();
+    if (!name || !email || !message) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    const contactForm = document.getElementById('contactForm');
+    const formData = new FormData(contactForm);
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+      const data = await res.json();
+      if (data.success) {
+        document.getElementById('formSuccess').style.display = 'block';
+        contactForm.reset();
+        document.getElementById('binQuestionWrap').style.display = 'none';
+        document.getElementById('shippingWrap').style.display = 'none';
+      } else {
+        alert('Something went wrong. Please try again or email us directly at blpanther@outlook.com');
+      }
+    } catch(err) {
+      alert('Something went wrong. Please try again or email us directly at blpanther@outlook.com');
+    }
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+  }
+
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
+      // Validate region selection
+      const region = document.getElementById('contactRegion').value;
+      if (!region) {
+        const select = document.getElementById('contactRegion');
+        select.style.borderColor = '#e74c3c';
+        select.focus();
+        alert('Please select your location in Texas before submitting.');
+        return;
+      }
       const btn = document.getElementById('submitBtn');
       btn.textContent = 'Sending...';
       btn.disabled = true;
