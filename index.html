@@ -536,7 +536,7 @@
         <a href="mailto:enrique.garza@nisdtx.org" style="font-size:0.78rem; color:rgba(245,240,232,0.55); display:block; margin-bottom:0.5rem; text-decoration:none;" onmouseover="this.style.color='var(--yellow-ball)'" onmouseout="this.style.color='rgba(245,240,232,0.55)'">✉ enrique.garza@nisdtx.org</a>
         <a href="https://maps.google.com/?cid=18163858828133843645" target="_blank" class="loc-link">Get Directions →</a>
       </div>
-      <div class="loc-card">
+      <div class="loc-card" style="padding:1.5rem;">
         <div class="loc-icon">🎾</div>
         <div class="loc-name">Carroll Senior High School</div>
         <div class="loc-addr">1501 W Southlake Blvd, Southlake TX 76092</div>
@@ -557,27 +557,52 @@
           attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        var icon = L.divIcon({
+        // Bin icon — Rally for Green themed
+        var binIcon = L.divIcon({
           className: '',
-          html: '<div style="font-size:3.5rem;line-height:1;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.7));">🎾</div>',
-          iconSize: [50, 50],
-          iconAnchor: [25, 25],
-          popupAnchor: [0, -15]
+          html: '<div style="font-size:2.4rem;line-height:1;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.7));text-align:center;">🗑️<br><span style="font-size:0.5rem;font-weight:700;font-family:Arial,sans-serif;color:#d4e157;background:#1a3a2a;padding:1px 3px;border-radius:2px;line-height:1.8;">BIN</span></div>',
+          iconSize: [44, 52],
+          iconAnchor: [22, 52],
+          popupAnchor: [0, -54]
+        });
+
+        // No-bin icon — different look for Marcus
+        var noBinIcon = L.divIcon({
+          className: '',
+          html: '<div style="font-size:2.4rem;line-height:1;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.7));text-align:center;">📧<br><span style="font-size:0.5rem;font-weight:700;font-family:Arial,sans-serif;color:#1a3a2a;background:#d4e157;padding:1px 3px;border-radius:2px;line-height:1.8;">NO BIN</span></div>',
+          iconSize: [52, 52],
+          iconAnchor: [26, 52],
+          popupAnchor: [0, -54]
         });
 
         var locations = [
-          { name: "Flower Mound High School", addr: "3411 Peters Colony Rd, Flower Mound TX", lat: 33.0332, lng: -97.0821 },
-          { name: "Marcus High School", addr: "5707 Morriss Rd, Flower Mound TX", lat: 33.0644, lng: -97.0626 },
-          { name: "Argyle Middle School", addr: "191 US-377, Argyle TX", lat: 33.1070, lng: -97.1854 },
-          { name: "Byron Nelson High School", addr: "2775 Bobcat Blvd, Trophy Club TX", lat: 33.0189, lng: -97.2028 },
-          { name: "Carroll Senior High School", addr: "1501 W Southlake Blvd, Southlake TX 76092", lat: 32.9414, lng: -97.1401 }
+          { name: "Flower Mound High School", addr: "3411 Peters Colony Rd, Flower Mound TX", lat: 33.0332, lng: -97.0821, hasBin: true },
+          { name: "Marcus High School", addr: "5707 Morriss Rd, Flower Mound TX — No bin. Email Coach Langdon to arrange drop-off.", lat: 33.0644, lng: -97.0626, hasBin: false },
+          { name: "Argyle Middle School", addr: "191 US-377, Argyle TX", lat: 33.1070, lng: -97.1854, hasBin: true },
+          { name: "Byron Nelson High School", addr: "2775 Bobcat Blvd, Trophy Club TX", lat: 33.0189, lng: -97.2028, hasBin: true },
+          { name: "Carroll Senior High School", addr: "1501 W Southlake Blvd, Southlake TX 76092", lat: 32.9414, lng: -97.1401, hasBin: true }
         ];
 
         locations.forEach(function(loc) {
+          var icon = loc.hasBin ? binIcon : noBinIcon;
+          var popupColor = loc.hasBin ? '#1a3a2a' : '#8b5e00';
           L.marker([loc.lat, loc.lng], { icon: icon })
             .addTo(map)
-            .bindPopup('<strong style="color:#1a3a2a;">' + loc.name + '</strong><br><span style="font-size:0.85rem;">' + loc.addr + '</span>');
+            .bindPopup('<strong style="color:' + popupColor + ';">' + loc.name + '</strong><br><span style="font-size:0.82rem;">' + loc.addr + '</span>');
         });
+
+        // Add legend
+        var legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function(map) {
+          var div = L.DomUtil.create('div');
+          div.innerHTML = '<div style="background:#1a3a2a;border:2px solid #d4e157;padding:0.7rem 1rem;font-family:Arial,sans-serif;font-size:0.78rem;border-radius:4px;min-width:150px;">' +
+            '<div style="font-weight:700;color:#d4e157;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Map Legend</div>' +
+            '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.4rem;color:#f5f0e8;">🗑️ <span>Drop-off bin location</span></div>' +
+            '<div style="display:flex;align-items:center;gap:0.5rem;color:#f5f0e8;">📧 <span>Email to arrange drop-off</span></div>' +
+            '</div>';
+          return div;
+        };
+        legend.addTo(map);
       });
     </script>
     </div>
