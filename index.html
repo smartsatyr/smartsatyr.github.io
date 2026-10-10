@@ -1048,50 +1048,39 @@
     btn.textContent = 'Sending...';
     btn.disabled = true;
     try {
-      const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'accept': 'application/json',
-          'api-key': 'YOUR_BREVO_API_KEY_HERE',
-          'content-type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          sender: { name: 'Rally for Green', email: 'blpanther@outlook.com' },
-          to: [{ email: email }],
-          subject: 'Check out Rally for Green — Tennis Ball Recycling Program',
-          htmlContent: `
-            <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;background:#f5f5f5;padding:0;">
-              <div style="background:#1a3a2a;padding:2rem;text-align:center;">
-                <h1 style="font-family:Georgia,serif;color:#d4e157;margin:0;font-size:2rem;letter-spacing:0.1em;">RALLY FOR GREEN</h1>
-                <p style="color:#52b788;font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase;margin:0.5rem 0 0;">Tennis Ball Recycling Program</p>
-              </div>
-              <div style="background:white;padding:2rem;">
-                <p style="color:#333;font-size:1rem;line-height:1.7;">Hi,</p>
-                <p style="color:#333;font-size:1rem;line-height:1.7;">Someone thought you'd be a great fit for <strong>Rally for Green</strong> — a youth-led tennis ball recycling program based in the Dallas–Fort Worth area, with a mission to expand across all of Texas.</p>
-                <p style="color:#333;font-size:1rem;line-height:1.7;">Rally for Green collects used tennis balls at schools and country clubs, keeps them out of landfills, recycles them into court surfaces, and donates gently used ones to local animal shelters.</p>
-                <p style="color:#333;font-size:1rem;line-height:1.7;">They are actively looking to partner with <strong>high schools and country clubs</strong> — at no cost to you.</p>
-                <div style="text-align:center;margin:2rem 0;">
-                  <a href="https://www.RallyForGreen.org" style="background:#1a3a2a;color:#d4e157;padding:1rem 2rem;text-decoration:none;font-family:Georgia,serif;font-weight:700;font-size:1.1rem;letter-spacing:0.05em;display:inline-block;border-radius:4px;">Visit RallyForGreen.org →</a>
-                </div>
-                <p style="color:#333;font-size:1rem;line-height:1.7;">Hope you find this as inspiring as we do!</p>
-                <p style="color:#333;font-size:1rem;line-height:1.7;">— The Rally for Green Team</p>
-              </div>
-              <div style="background:#1a3a2a;padding:1rem;text-align:center;">
-                <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin:0;">© 2025 Rally for Green · <a href="https://www.RallyForGreen.org" style="color:#52b788;">RallyForGreen.org</a></p>
-              </div>
-            </div>
-          `
+          access_key: 'f5e07b0d-dc4d-4772-8679-0e29a3091e1f',
+          subject: 'Someone shared Rally for Green with a coach/director',
+          from_name: 'Rally for Green Website',
+          to: email,
+          message: `Hi,
+
+Someone thought you'd be a great fit for Rally for Green — a youth-led tennis ball recycling program based in the Dallas–Fort Worth area, with a mission to expand across all of Texas.
+
+Rally for Green collects used tennis balls at schools and country clubs, keeps them out of landfills, recycles them into court surfaces, and donates gently used ones to local animal shelters.
+
+We are actively looking to partner with high schools and country clubs — at no cost to you.
+
+Visit us at: https://www.RallyForGreen.org
+
+Hope you find this as inspiring as we do!
+
+— The Rally for Green Team`
         })
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         document.getElementById('referralSuccess').style.display = 'block';
         document.getElementById('referralEmail').value = '';
       } else {
-        const err = await res.json();
-        console.error(err);
+        console.error(data);
         alert('Something went wrong. Please try again.');
       }
     } catch(err) {
+      console.error(err);
       alert('Something went wrong. Please try again.');
     }
     btn.textContent = 'Send the Site →';
