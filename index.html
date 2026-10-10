@@ -1037,7 +1037,8 @@
     });
   }
 
-  // Referral sender via Web3Forms
+  // Referral sender — calls our own Cloudflare Pages Function, which holds
+  // the Brevo API key server-side and does the actual sending.
   async function sendReferral() {
     const email = document.getElementById('referralEmail').value.trim();
     if (!email || !email.includes('@')) {
@@ -1048,28 +1049,10 @@
     btn.textContent = 'Sending...';
     btn.disabled = true;
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/api/send-referral', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          access_key: 'f5e07b0d-dc4d-4772-8679-0e29a3091e1f',
-          subject: 'Someone shared Rally for Green with a coach/director',
-          from_name: 'Rally for Green Website',
-          to: email,
-          message: `Hi,
-
-Someone thought you'd be a great fit for Rally for Green — a youth-led tennis ball recycling program based in the Dallas–Fort Worth area, with a mission to expand across all of Texas.
-
-Rally for Green collects used tennis balls at schools and country clubs, keeps them out of landfills, recycles them into court surfaces, and donates gently used ones to local animal shelters.
-
-We are actively looking to partner with high schools and country clubs — at no cost to you.
-
-Visit us at: https://www.RallyForGreen.org
-
-Hope you find this as inspiring as we do!
-
-— The Rally for Green Team`
-        })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
       });
       const data = await res.json();
       if (data.success) {
@@ -1079,7 +1062,7 @@ Hope you find this as inspiring as we do!
         console.error(data);
         alert('Something went wrong. Please try again.');
       }
-    } catch(err) {
+    } catch (err) {
       console.error(err);
       alert('Something went wrong. Please try again.');
     }
